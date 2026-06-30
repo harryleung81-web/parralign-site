@@ -24,15 +24,15 @@ const teamData = {
 const whowhatourData = {
     'who': {
         name: "Who We Are",
-        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare."
+        description: "We are an elite consulting SWAT team composed of execution-focused systems architects. We emerged from the technical engineering groups of First Republic Bank, where we directly built, managed, and defended complex compensation models before executive leadership boards. We bridge data engineering down in the weeds with strategic narrative translation at the executive level."
     },
     'what': {
         name: "What We Do",
-        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast."
+        description: "We orchestrate full-cycle sales performance management and systems integration from initial raw database query models up to boardroom execution layouts. We align multi-layered incentive plans, design clean enterprise data architectures, deploy native Varicent data configurations, and balance system operations without messy manual workarounds."
     },
     'our': {
         name: "Our Focus",
-        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"
+        description: "We build uncompromising data infrastructure for scaling enterprises. If your operational data depends on manual spreadsheets, disconnected third-party logic blocks, or post-integration fragility, we drop in surgically to engineer high-fidelity tracking engines built completely from first principles."
     }
 };
 
@@ -63,20 +63,6 @@ function openBio(key) {
 function closeB3() { document.getElementById('b3Modal').style.display = "none"; }
 function closeBio() { document.getElementById('bioModal').style.display = "none"; }
 
-// --- SHARED CLICK-OUTSIDE LISTENER ---
-window.onclick = function(event) {
-    const bioModal = document.getElementById('bioModal');
-    const b3Modal = document.getElementById('b3Modal');
-
-    // These checks prevent the "null" error
-    if (bioModal && event.target === bioModal) {
-        bioModal.style.display = "none";
-    }
-    if (b3Modal && event.target === b3Modal) {
-        b3Modal.style.display = "none";
-    }
-};
-
 
 // --- Function for Contact Form & Success Modal ---
 const contactForm = document.getElementById('contactForm');
@@ -89,7 +75,6 @@ if (contactForm) {
         
         submitBtn.innerText = 'Sending...';
 
-        // These IDs come from your EmailJS Dashboard
         const serviceID = 'service_01ds56n';
         const templateID = 'template_0p8574y';
 
@@ -110,7 +95,7 @@ function closeSuccessModal() {
     document.getElementById('successModal').style.display = "none";
 }
 
-// Update your window.onclick to also close the success modal
+// --- SHARED CLICK-OUTSIDE LISTENER ---
 window.onclick = function(event) {
     const bioModal = document.getElementById('bioModal');
     const b3Modal = document.getElementById('b3Modal');
