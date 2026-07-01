@@ -24,15 +24,15 @@ const teamData = {
 const whowhatourData = {
     'who': {
         name: "Who We Are",
-        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare.
+        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare."
     },
     'what': {
         name: "What We Do",
-        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast.    },
+        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast."
     },
-            'our': {
+    'our': {
         name: "Our Focus",
-        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"    
+        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"
     }
 };
 
