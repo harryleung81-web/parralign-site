@@ -24,15 +24,15 @@ const teamData = {
 const whowhatourData = {
     'who': {
         name: "Who We Are",
-        description: "We are an elite consulting SWAT team composed of execution-focused systems architects. We emerged from the technical engineering groups of First Republic Bank, where we directly built, managed, and defended complex compensation models before executive leadership boards. We bridge data engineering down in the weeds with strategic narrative translation at the executive level."
+        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare.
     },
     'what': {
         name: "What We Do",
-        description: "We orchestrate full-cycle sales performance management and systems integration from initial raw database query models up to boardroom execution layouts. We align multi-layered incentive plans, design clean enterprise data architectures, deploy native Varicent data configurations, and balance system operations without messy manual workarounds."
+        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast.    },
     },
-    'our': {
+            'our': {
         name: "Our Focus",
-        description: "We build uncompromising data infrastructure for scaling enterprises. If your operational data depends on manual spreadsheets, disconnected third-party logic blocks, or post-integration fragility, we drop in surgically to engineer high-fidelity tracking engines built completely from first principles."
+        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"    
     }
 };
 
