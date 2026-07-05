@@ -24,15 +24,15 @@ const teamData = {
 const whowhatourData = {
     'who': {
         name: "Who We Are",
-        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare."
+        description: "Most businesses don't have a data problem, they have an alignment problem. We built Parralign because we spent decades on the client side of that exact problem — operators who owned and scaled complex enterprise operations from the inside, not outside theorists. We listen past the stated problem to what your organization actually needs, bridging the teams in the weeds with the executives in the boardroom."
     },
     'what': {
         name: "What We Do",
-        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast."
-    },
+        description: "Behind every system are the people who run it — so we align incentives, teams, and structure, not just technology. We assess, redesign, and streamline critical workflows across compensation, talent operations, and finance, tracing operational friction down to its root cause and turning fractured configurations into seamless, automated workflows."  
+            },
     'our': {
         name: "Our Focus",
-        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"
+        description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown.​"
     }
 };
 
