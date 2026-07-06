@@ -125,6 +125,20 @@ h1, h2, h3, h4, .section-title, .subtitle {
     margin: 0px 0 10px 0;
 }
 
+/* Section 2 Lead-In Typography Embellishment */
+.section-lead-in {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px auto; /* Ample space below to separate cleanly from the card grid */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;       /* Marginally larger than body text for editorial emphasis */
+    font-weight: 600;          /* Medium-bold weight so it feels substantial */
+    font-style: italic;        /* Italicized to denote a first-person guiding philosophy */
+    color: var(--2ndary);      /* Rendered in your deep branding teal instead of muted grey */
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+}
+
 /* Hero Section */
 .hero { 
     background: var(--2ndary); 
