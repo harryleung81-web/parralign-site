@@ -820,7 +820,7 @@ footer {
    ========================================================================== */
 
 #vision-outro {
-    padding: 80px 0 50px 0; /* Substantial breathing room before hitting the footer */
+    padding: 40px 0 30px 0; /* Substantial breathing room before hitting the footer */
     text-align: center;
     display: flex;
     justify-content: center;
