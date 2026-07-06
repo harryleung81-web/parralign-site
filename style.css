@@ -826,6 +826,7 @@ footer {
     justify-content: center;
 }
 
+
 .outro-container {
     max-width: 1000px; /* Constrains line length for premium readability */
     margin: 0 auto;
@@ -846,8 +847,13 @@ footer {
     color: var(--2ndary); /* Uses your signature deep teal */
     font-size: 2.2rem;
     line-height: 1.3;
-    margin: 0 0 1px 0;
+    margin: 0 0 10px 0;
     letter-spacing: -0.5px;
+}
+
+#vision-outro h3.text-mid-scale {
+    margin-top: 0;       /* Removes space above the headline */
+    margin-bottom: 8px;  /* Significantly tightens the gap directly below the headline */
 }
 
 #vision-outro p {
