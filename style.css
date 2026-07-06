@@ -846,7 +846,7 @@ footer {
     color: var(--2ndary); /* Uses your signature deep teal */
     font-size: 2.2rem;
     line-height: 1.3;
-    margin: 0 0 5px 0;
+    margin: 0 0 1px 0;
     letter-spacing: -0.5px;
 }
 
