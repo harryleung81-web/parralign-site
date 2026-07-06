@@ -349,7 +349,7 @@ h1, h2, h3, h4, .section-title, .subtitle {
 }
 
 .wwo:hover { 
-    background-color: var(--primary); 
+    background-color: var(--2ndary); 
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.8);
 }
