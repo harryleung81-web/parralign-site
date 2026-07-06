@@ -139,9 +139,9 @@ h1, h2, h3, h4, .section-title, .subtitle {
     letter-spacing: -0.2px;
 }
 
-/* Hero Section */
+/* Hero Section- the background of the main */
 .hero { 
-    background: var(--2ndary); 
+    background: var(--primary); 
     color: #fff; 
     text-align: center; 
     display: flex;
@@ -337,7 +337,7 @@ h1, h2, h3, h4, .section-title, .subtitle {
     font-size: 0.95rem;
     opacity: 0.7;
     min-height: 2.3em;
-    color: var(--primary);
+    color: var(--2ndary);
 }
 
 .wwo p:first-of-type {
