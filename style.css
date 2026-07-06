@@ -92,7 +92,7 @@ h1, h2, h3, h4, .section-title, .subtitle {
 
 /* 3. Add a hover effect so users know they are clickable */
 .nav-links a:hover {
-    color: var(--primary);
+    color: var(--2ndary);
 }
 
 .btn-cta { 
