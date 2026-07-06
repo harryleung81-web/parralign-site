@@ -400,6 +400,15 @@ h1, h2, h3, h4, .section-title, .subtitle {
     margin: 0;
 }
 
+/* Custom font scale utility */
+.text-mid-scale {
+    font-size: 1.85rem;       /* Sits perfectly between your 2.5rem h2 and smaller h3/h4 headers */
+    line-height: 1.4;
+    font-weight: 700;          /* Matches the professional bold weight of your titles */
+    font-family: 'Poppins', sans-serif; /* Ensures branding font consistency */
+    color: var(--2ndary);      /* Keeps it matching your dark teal branding color */
+}
+
 /* Modals Architecture */
 .modal {
     display: none; 
