@@ -771,7 +771,7 @@ footer {
 .case-container {
     background: var(--2ndary);
     color: #ffffff;
-    padding: 50px 40px;
+    padding: 50px 20px;
     border-radius: 16px;
     margin: 60px 0;
     box-shadow: 0 20px 40px rgba(36, 77, 87, 0.15);
