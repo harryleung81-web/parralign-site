@@ -806,6 +806,62 @@ footer {
     opacity: 0.9;
 }
 
+/* ==========================================================================
+   Vision Outro Section Styling
+   ========================================================================== */
+
+#vision-outro {
+    padding: 80px 0 100px 0; /* Substantial breathing room before hitting the footer */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.outro-container {
+    max-width: 800px; /* Constrains line length for premium readability */
+    margin: 0 auto;
+}
+
+.outro-tagline {
+    display: inline-block;
+    color: var(--primary); /* Uses your brand light teal */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#vision-outro h2 {
+    color: var(--2ndary); /* Uses your signature deep teal */
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+#vision-outro p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive adjustment for smaller mobile screens */
+@media (max-width: 600px) {
+    #vision-outro {
+        padding: 50px 0 60px 0;
+    }
+    #vision-outro h2 {
+        font-size: 1.7rem;
+    }
+    #vision-outro p {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 2rem; 
