@@ -827,7 +827,7 @@ footer {
 }
 
 .outro-container {
-    max-width: 800px; /* Constrains line length for premium readability */
+    max-width: 1000px; /* Constrains line length for premium readability */
     margin: 0 auto;
 }
 
