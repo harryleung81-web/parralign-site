@@ -986,7 +986,7 @@ footer {
 }
 
 .intro-left-column {
-    flex: 1 1 300px;
+    flex: 1 1 360px;
 }
 
 .intro-right-column {
@@ -1009,11 +1009,13 @@ footer {
 
 .connect-premium-intro h3 {
     color: var(--2ndary);
-    font-size: 2.2rem;
-    line-height: 1.25;
+    font-size: 2rem;            /* Slightly reduced from 2.2rem to prevent premature text wrapping */
+    line-height: 1.3;
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.5px;
+    white-space: normal;        /* Allows normal text wrapping behavior */
+    word-break: keep-all;       /* Strictly prevents single words from breaking internally */
 }
 
 .connect-premium-intro .text-accent-color {
