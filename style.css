@@ -301,7 +301,7 @@ h1, h2, h3, h4, .section-title, .subtitle {
 #whowhatour .grid {
     display: flex;
     justify-content: center;
-    gap: 80px;        
+    gap: 30px;        
     max-width: 1100px; 
     margin: 60px auto 0 auto; 
     width: 100%;
@@ -310,7 +310,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
 .wwo { 
     cursor: pointer; 
     transition: transform 0.2s ease, background-color 0.2s ease;
-    flex: 0 1 200px; 
+    flex: 1 1 calc(33.333% - 20px); /* Changed to use uniform fluid scaling instead of a fixed 200px width */
+    min-width: 250px;          /* Prevents squishing on tablet widths */
     height: 170px;          
     display: flex;
     flex-direction: column;
@@ -319,8 +320,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
     background: #ffffff; 
     color: #ffffff;
     padding: 20px; 
-    border-radius: 20px; 
-    box-shadow: 0 10px 10px rgba(0,0,0,0.4); 
+    border-radius: 12px; /* Standardized uniform border-radius */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Softened shadow to match other cards */
     text-align: center; 
     box-sizing: border-box;
 }
@@ -747,7 +748,7 @@ footer {
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 30px; /* Standardized layout grid gap */
     margin: 40px 0;
 }
 
@@ -781,7 +782,7 @@ footer {
     background: var(--2ndary);
     color: #ffffff;
     padding: 50px 40px;
-    border-radius: 16px;
+    border-radius: 12px;
     margin: 60px 0 20px 0; /* Top: 60px, Sides: 0, Bottom: 10px */
     box-shadow: 0 20px 40px rgba(36, 77, 87, 0.15);
 }
@@ -808,13 +809,13 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px; /* Standardized layout grid gap */
     width: 100%;
 }
 
 .case-card-item {
-    flex: 1 1 calc(50% - 20px); /* 50% width minus half the gap layout */
-    min-width: 300px;           /* Forces stack mode on mobile screen profiles */
+    flex: 1 1 calc(50% - 15px); /* Balanced 50% width minus half of the updated 30px gap */
+    min-width: 300px;           
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 12px;
@@ -864,7 +865,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px; /* Standardized layout grid gap */
     width: 100%;
     margin-top: 20px;
 }
@@ -875,8 +876,8 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     text-align: left;
-    flex: 1 1 calc(25% - 20px); /* 4 columns on desktop displays */
-    min-width: 230px;           /* Drops layout into clean individual blocks smoothly */
+    flex: 1 1 calc(25% - 22px); /* Balanced 4-column width utilizing the uniform 30px gap */
+    min-width: 230px;           
     position: relative;
     box-sizing: border-box;
     border-top: 3px solid var(--primary);
