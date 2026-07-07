@@ -989,6 +989,54 @@ footer {
         max-width: 450px;
     }
 }
+/* ==========================================================================
+   Connect Page CTA Section #8 Styling
+   ========================================================================== */
+
+.connect-cta-block {
+    text-align: center;
+    margin: 20px auto 15px auto;
+    max-width: 680px;
+    box-sizing: border-box;
+}
+
+.connect-cta-block h3 {
+    color: var(--2ndary);
+    font-size: 1.85rem;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.connect-cta-body {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.connect-cta-highlight {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+/* Responsive adjustment for clean spacing on mobile screen profiles */
+@media (max-width: 600px) {
+    .connect-cta-block h3 {
+        font-size: 1.5rem;
+    }
+    .connect-cta-body {
+        font-size: 0.95rem;
+    }
+    .connect-cta-highlight {
+        font-size: 1.05rem;
+    }
+}
 
 @media (max-width: 600px) {
     #vision-outro {
