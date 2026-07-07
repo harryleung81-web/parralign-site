@@ -656,14 +656,24 @@ h1, h2, h3, h4, .section-title, .subtitle {
 
 input, textarea { 
     width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ddd; 
-    border-radius: 6px; 
+    padding: 14px 16px; 
+    border: 1px solid #e2e8f0; 
+    background-color: #f8fafc;
+    border-radius: 6px; /* Standardized small tier border-radius formatting */
     font-family: inherit; 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     box-sizing: border-box;
     font-weight: 400;      
-    color: black;  
+    color: #1e293b;  
+    transition: all 0.2s ease;
+}
+
+/* Subtle accent focus states when typing */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(75, 138, 155, 0.15);
 }
 
 #contact .section-title {
@@ -675,12 +685,15 @@ input, textarea {
 }
 
 .contact-form-container button.btn-cta {
-    font-size: 1.1rem;       
+    font-size: 1rem;       
     font-weight: 700;        
     text-transform: uppercase; 
     letter-spacing: 0.5px;     
-    padding: 10px 15px;      
-    transition: transform 0.2s ease; 
+    padding: 14px 28px;      
+    margin: 10px 0 0 0 !important; /* Resets default navigation spacer properties */
+    width: auto;                  /* Keeps standard elegant layout balance on wide monitors */
+    display: inline-block;
+    cursor: pointer;
 }
 
 footer {
@@ -1037,7 +1050,16 @@ footer {
         font-size: 1.05rem;
     }
 }
-
+/* Mobile full-width conversion transformation mechanics */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-form-container button.btn-cta {
+        width: 100%;              /* Stretches button out to match finger strike targets on phones */
+    }
+}
 @media (max-width: 600px) {
     #vision-outro {
         padding: 50px 0 60px 0;
