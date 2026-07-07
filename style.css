@@ -1050,6 +1050,16 @@ footer {
     line-height: 1.4;
     letter-spacing: -0.2px;
 }
+/* Direct Contact Channels Alignment */
+.connect-direct-channels {
+    font-family: 'Inter', sans-serif;
+    color: var(--2ndary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 8px 0 0 0; /* Creates an elegant, tight space directly below your call quote */
+    opacity: 0.8;
+}
 
 /* ==========================================================================
    Media Queries & Responsive Overrides
