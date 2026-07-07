@@ -999,12 +999,16 @@ footer {
 .intro-tagline {
     font-family: 'Inter', sans-serif;
     color: var(--primary);
-    font-size: 0.75rem;
+    background-color: rgba(75, 138, 155, 0.08); /* 8% opacity of your primary teal */
+    border: 1px solid rgba(75, 138, 155, 0.15);
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    display: inline-block; /* Keeps the background from stretching full width */
+    padding: 4px 10px;
+    border-radius: 4px; /* Matches our small-tier radius standard */
+    margin-bottom: 16px;
 }
 
 .connect-premium-intro h3 {
