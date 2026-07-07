@@ -35,9 +35,22 @@
 
     <section id="contact">
         <div class="contact-bg-wrapper">
-            <div class="container">
-                <h2 class="section-title">Connect With Us</h2>
-                <div class="contact-form-container">
+            <div class="container" style="max-width: 750px;"> <!-- Constrained width for premium editorial layout -->
+                <h2 class="section-title" style="margin-top: 10px; color: var(--2ndary);">Let's Connect</h2>
+                
+                <!-- NEW SECTION #8: CALL TO ACTION BLOCK -->
+                <div class="connect-cta-block">
+                    <h3>Clarity to your data. Alignment to your strategy.</h3>
+                    <p class="connect-cta-body">
+                        A struggling implementation, a data governance gap, or a compensation plan that needs to scale—drop us in to find the root cause and deliver surgical, high-impact fixes.
+                    </p>
+                    <p class="connect-cta-highlight">
+                        "Book a free 30-minute discovery call—no pitch, just listening."
+                    </p>
+                </div>
+
+                <!-- Form wrapper remains directly below -->
+                <div class="contact-form-container" style="margin-top: 20px;">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" name="from_name" placeholder="Full Name" required>
