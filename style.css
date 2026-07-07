@@ -970,6 +970,82 @@ footer {
 }
 
 /* ==========================================================================
+   Premium Editorial Connect Header Styling
+   ========================================================================== */
+
+.connect-premium-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto 30px auto;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; /* Premium consulting frameworks look cleaner left-aligned */
+}
+
+.intro-left-column {
+    flex: 1 1 300px;
+}
+
+.intro-right-column {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-tagline {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.connect-premium-intro h3 {
+    color: var(--2ndary);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.connect-premium-intro .text-accent-color {
+    color: var(--primary); /* Keeps typography inside the elegant blue-teal scope */
+}
+
+.connect-cta-body {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+/* Elegant framed block specifically for your low-pressure baseline message */
+.connect-quote-box {
+    border-left: 3px solid var(--accent); /* Uses your professional orange accent line */
+    padding-left: 15px;
+    margin: 5px 0 0 0;
+}
+
+.connect-cta-highlight {
+    font-family: 'Poppins', sans-serif;
+    color: var(--2ndary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+}
+
+/* ==========================================================================
    Media Queries & Responsive Overrides
    ========================================================================== */
 
@@ -1001,83 +1077,56 @@ footer {
         width: 100%;
         max-width: 450px;
     }
-}
-/* ==========================================================================
-   Connect Page CTA Section #8 Styling
-   ========================================================================== */
 
-.connect-cta-block {
-    text-align: center;
-    margin: 20px auto 15px auto;
-    max-width: 680px;
-    box-sizing: border-box;
-}
-
-.connect-cta-block h3 {
-    color: var(--2ndary);
-    font-size: 1.85rem;
-    line-height: 1.3;
-    margin: 0 0 12px 0;
-    font-weight: 700;
-}
-
-.connect-cta-body {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-}
-
-.connect-cta-highlight {
-    font-family: 'Poppins', sans-serif;
-    color: var(--primary);
-    font-size: 1.15rem;
-    font-weight: 600;
-    font-style: italic;
-    margin: 0;
-    letter-spacing: -0.2px;
-}
-
-/* Responsive adjustment for clean spacing on mobile screen profiles */
-@media (max-width: 600px) {
-    .connect-cta-block h3 {
-        font-size: 1.5rem;
+    /* Asymmetric Premium Intro Adaptations */
+    .connect-premium-intro {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
     }
-    .connect-cta-body {
-        font-size: 0.95rem;
+    
+    .connect-premium-intro h3 {
+        font-size: 1.8rem;
     }
-    .connect-cta-highlight {
-        font-size: 1.05rem;
+    
+    .connect-quote-box {
+        margin-top: 10px;
     }
 }
-/* Mobile full-width conversion transformation mechanics */
+
+/* Mobile Specific Optimizations */
 @media (max-width: 600px) {
     .form-group {
         flex-direction: column;
         gap: 0;
     }
+
     .contact-form-container button.btn-cta {
-        width: 100%;              /* Stretches button out to match finger strike targets on phones */
+        width: 100%; /* Stretches button out to match finger strike targets on phones */
     }
-}
-@media (max-width: 600px) {
+
     #vision-outro {
         padding: 50px 0 60px 0;
     }
+
     #vision-outro h2 {
         font-size: 1.7rem;
     }
+
     #vision-outro p {
         font-size: 1rem;
     }
+
     .hero h1 {
         font-size: 2rem; 
     }
+
     .modal-logo {
         height: 30px;
         top: 15px;
         left: 15px;
     }
+
     .modal-content {
         padding-top: 50px;
     }
