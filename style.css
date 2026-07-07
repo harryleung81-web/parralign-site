@@ -738,7 +738,7 @@ footer {
     margin-bottom: 5px;
 }
 
-.stat-label {
+.stat-card-label {
     font-size: 0.9rem;
     color: #666;
     font-weight: 600;
@@ -856,6 +856,58 @@ footer {
 }
 
 /* ==========================================================================
+   Timeline Process Section Styling
+   ========================================================================== */
+
+.timeline-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timeline-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    text-align: left;
+    flex: 1 1 calc(25% - 20px); /* 4 columns on desktop displays */
+    min-width: 230px;           /* Drops layout into clean individual blocks smoothly */
+    position: relative;
+    box-sizing: border-box;
+    border-top: 3px solid var(--primary);
+}
+
+.timeline-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(75, 138, 155, 0.1);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.timeline-card h4 {
+    color: var(--2ndary);
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+/* ==========================================================================
    Vision Outro Section Styling
    ========================================================================== */
 
@@ -923,6 +975,17 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Process Timeline Mobile Adaptations */
+    .timeline-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline-card {
+        width: 100%;
+        max-width: 450px;
     }
 }
 
