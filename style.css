@@ -26,7 +26,7 @@ body {
 }
 
 /* Use Poppins for all titles to make them "pop" */
-h1, h2, h3, h4, .section-title, .subtitle {
+h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 700; /* Makes Poppins look its best */
     letter-spacing: -0.5px; /* Poppins looks great with tight spacing in headers */
@@ -148,7 +148,6 @@ h1, h2, h3, h4, .section-title, .subtitle {
     flex-direction: column;
     justify-content: flex-start; /* Centers the text vertically */
     align-items: center;     /* Centers the text horizontally */
-    /* flex-grow: .5;            Forces hero to fill every pixel left on the screen */
     min-height: auto; 
     padding: 30px 10px;
     box-sizing: border-box;
@@ -172,6 +171,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
     text-align: center; 
     margin: 40px 0 20px; 
     font-size: 2.5rem; 
+    color: var(--2ndary);
+    text-transform: none; /* Enforces clean Title Case layout scaling across components */
 }
 
 .subtitle { 
@@ -883,7 +884,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Fix #12: Redesigned to be borderless and flat at rest[cite: 7] */
+/* Fix #12: Redesigned to be borderless and flat at rest */
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
@@ -894,14 +895,14 @@ footer {
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
-    border-top: 3px solid transparent; /* Border flat/invisible at rest[cite: 7] */
+    border-top: 3px solid transparent; /* Border flat/invisible at rest */
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Fix #12: Matching the active hover treatment indicator highlight of your capabilities[cite: 7] */
+/* Fix #12: Matching the active hover treatment indicator highlight of your capabilities */
 .timeline-card:hover {
     transform: translateY(-4px);
-    border-top-color: var(--primary); /* Changes to primary teal border color on hover[cite: 7] */
+    border-top-color: var(--primary); /* Changes to primary teal border color on hover */
 }
 
 .timeline-badge {
@@ -945,25 +946,6 @@ footer {
     margin: 0 auto;
 }
 
-.outro-tagline {
-    display: inline-block;
-    color: var(--primary); 
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-#vision-outro h2 {
-    color: var(--2ndary); 
-    font-size: 2.2rem;
-    line-height: 1.3;
-    margin: 0 0 10px 0;
-    letter-spacing: -0.5px;
-}
-
 #vision-outro h3.text-mid-scale {
     margin-top: 0;       
     margin-bottom: 8px;  
@@ -981,29 +963,18 @@ footer {
    Fix #14: Enterprise Engagements Section Alignment & Spacing Balance
    ========================================================================= */
 
-/* Adjusted to match the exact spacing at the bottom of the section[cite: 7] */
+/* Adjusted to safely match vertical space padding above and below cards */
 #featured-case {
-    padding-top: 10px;    /* Pulls the section up to eliminate the massive gap[cite: 7] */
-    padding-bottom: 50px; /* Perfectly balances the exit spacing hitting the Vision Outro[cite: 7] */
+    padding-top: 10px;    /* Pulls section up to remove large structural space above */
+    padding-bottom: 50px; /* Perfectly standardizes and matches exit spacing onto Outro text */
 }
 
-/* Fix Change 1: Standardizes title text properties to match other sections[cite: 7] */
-.section-title-neutral {
-    text-align: center;
-    color: #ffffff; /* Updated to your brand  */
-    font-size: 2.2rem;
-    margin-top: 0;         /* Flattens top block compression[cite: 7] */
-    margin-bottom: 35px;   /* Clean breathing room to separate header from cards[cite: 7] */
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-/* Fix Change 3: Category Badges styled as a pale muted layout label[cite: 7] */
+/* Fix Change 3: Category Badges styled as a pale muted layout label */
 .case-category-badge {
     display: inline-block;
-    background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint[cite: 7] */
+    background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint */
     border: 1px solid rgba(136, 201, 208, 0.25);
-    color: #ffffff;                        
+    color: var(--primary);                        
     padding: 4px 12px;
     border-radius: 4px;                           
     font-family: 'Inter', sans-serif;
@@ -1095,21 +1066,6 @@ footer {
     justify-content: space-between;
 }
 
-.intro-tagline {
-    font-family: 'Inter', sans-serif;
-    color: var(--primary);
-    background-color: rgba(75, 138, 155, 0.08); 
-    border: 1px solid rgba(75, 138, 155, 0.15);
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block; 
-    padding: 4px 10px;
-    border-radius: 4px; 
-    margin-bottom: 16px;
-}
-
 .connect-premium-intro h3 {
     color: var(--2ndary);
     font-size: 1.60rem;            
@@ -1162,6 +1118,56 @@ footer {
 }
 
 /* ==========================================================================
+   Fix #18: Design System Capitalization & Typographic Standardization Rules
+   ========================================================================== */
+
+/* Clean Title Case rule scaling safely across structural blocks */
+.section-title-neutral {
+    text-align: center;
+    color: var(--primary); /* Locks header cleanly to brand primary color */
+    margin-top: 0;         /* Squashes block padding bounds */
+    margin-bottom: 35px;   /* Clean separator before entering card grids */
+    text-transform: none;  /* Relies on Title Case standard */
+}
+
+/* Micro-Badges / Taglines: Programmatic uppercase treatment with tracking overrides */
+.outro-tagline,
+.intro-tagline {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important; /* Programmatically forces ALL CAPS */
+    letter-spacing: 2px !important;       /* Airy corporate aesthetic */
+}
+
+/* Option 1: Premium status badge container pill chip layout for Active Advisory */
+.intro-tagline {
+    color: var(--primary);
+    background-color: rgba(75, 138, 155, 0.08); 
+    border: 1px solid rgba(75, 138, 155, 0.15);
+    display: inline-block; 
+    padding: 4px 10px;
+    border-radius: 4px; 
+    margin-bottom: 16px;
+}
+
+/* Outro tagline specific layout alignment variables */
+.outro-tagline {
+    display: inline-block;
+    color: var(--primary); 
+    margin-bottom: 15px;
+}
+
+/* Heading formatting across child information architectures */
+.tech-card h4,
+.timeline-card h4,
+.case-card-header h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: none; /* Safely balances hierarchy against top-tier sections */
+}
+
+/* ==========================================================================
    Media Queries & Responsive Overrides
    ========================================================================== */
 
@@ -1188,7 +1194,7 @@ footer {
         align-items: center;
     }
     
-    /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices[cite: 7] */
+    /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices */
     .timeline-card {
         width: 100%;
         max-width: 450px;
