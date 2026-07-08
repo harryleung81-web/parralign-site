@@ -995,6 +995,7 @@ footer {
     margin-top: 0;         /* Flattens top block compression[cite: 7] */
     margin-bottom: 35px;   /* Clean breathing room to separate header from cards[cite: 7] */
     font-weight: 700;
+    text-decoration: underline;
 }
 
 /* Fix Change 3: Category Badges styled as a pale muted layout label[cite: 7] */
