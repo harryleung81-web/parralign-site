@@ -990,7 +990,7 @@ footer {
 /* Fix Change 1: Standardizes title text properties to match other sections[cite: 7] */
 .section-title-neutral {
     text-align: center;
-    color: #333; /* Updated to your brand  */
+    color: #ffffff; /* Updated to your brand  */
     font-size: 2.2rem;
     margin-top: 0;         /* Flattens top block compression[cite: 7] */
     margin-bottom: 35px;   /* Clean breathing room to separate header from cards[cite: 7] */
