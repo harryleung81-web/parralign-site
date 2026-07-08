@@ -310,8 +310,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
 .wwo { 
     cursor: pointer; 
     transition: transform 0.2s ease, background-color 0.2s ease;
-    flex: 1 1 calc(33.333% - 20px); /* Changed to use uniform fluid scaling instead of a fixed 200px width */
-    min-width: 250px;          /* Prevents squishing on tablet widths */
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 250px;          
     height: 170px;          
     display: flex;
     flex-direction: column;
@@ -320,8 +320,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
     background: #ffffff; 
     color: #ffffff;
     padding: 20px; 
-    border-radius: 12px; /* Standardized uniform border-radius */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Softened shadow to match other cards */
+    border-radius: 12px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
     text-align: center; 
     box-sizing: border-box;
 }
@@ -412,11 +412,11 @@ h1, h2, h3, h4, .section-title, .subtitle {
 
 /* Custom font scale utility */
 .text-mid-scale {
-    font-size: 1.85rem;       /* Sits perfectly between your 2.5rem h2 and smaller h3/h4 headers */
+    font-size: 1.85rem;       
     line-height: 1.4;
-    font-weight: 700;          /* Matches the professional bold weight of your titles */
-    font-family: 'Poppins', sans-serif; /* Ensures branding font consistency */
-    color: var(--2ndary);      /* Keeps it matching your dark teal branding color */
+    font-weight: 700;          
+    font-family: 'Poppins', sans-serif; 
+    color: var(--2ndary);      
 }
 
 /* Modals Architecture */
@@ -659,7 +659,7 @@ input, textarea {
     padding: 14px 16px; 
     border: 1px solid #e2e8f0; 
     background-color: #f8fafc;
-    border-radius: 6px; /* Standardized small tier border-radius formatting */
+    border-radius: 6px; 
     font-family: inherit; 
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -690,8 +690,8 @@ input:focus, textarea:focus {
     text-transform: uppercase; 
     letter-spacing: 0.5px;     
     padding: 14px 28px;      
-    margin: 10px 0 0 0 !important; /* Resets default navigation spacer properties */
-    width: auto;                  /* Keeps standard elegant layout balance on wide monitors */
+    margin: 10px 0 0 0 !important; 
+    width: auto;                  
     display: inline-block;
     cursor: pointer;
 }
@@ -761,7 +761,7 @@ footer {
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* Standardized layout grid gap */
+    gap: 30px; 
     margin: 40px 0;
 }
 
@@ -796,7 +796,7 @@ footer {
     color: #ffffff;
     padding: 50px 40px;
     border-radius: 12px;
-    margin: 60px 0 20px 0; /* Top: 60px, Sides: 0, Bottom: 10px */
+    margin: 60px 0 20px 0; 
     box-shadow: 0 20px 40px rgba(36, 77, 87, 0.15);
 }
 
@@ -822,12 +822,12 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px; /* Standardized layout grid gap */
+    gap: 30px; 
     width: 100%;
 }
 
 .case-card-item {
-    flex: 1 1 calc(50% - 15px); /* Balanced 50% width minus half of the updated 30px gap */
+    flex: 1 1 calc(50% - 15px); 
     min-width: 300px;           
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
@@ -878,28 +878,30 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Standardized layout grid gap */
+    gap: 30px; 
     width: 100%;
     margin-top: 20px;
 }
 
-.timeline-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-}
-
+/* Fix #12: Redesigned to be borderless and flat at rest[cite: 7] */
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     text-align: left;
-    flex: 1 1 calc(25% - 22px); /* Balanced 4-column width utilizing the uniform 30px gap */
+    flex: 1 1 calc(25% - 22px); 
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
-    border-top: 3px solid #eee;
+    border-top: 3px solid transparent; /* Border flat/invisible at rest[cite: 7] */
     transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fix #12: Matching the active hover treatment indicator highlight of your capabilities[cite: 7] */
+.timeline-card:hover {
+    transform: translateY(-4px);
+    border-top-color: var(--primary); /* Changes to primary teal border color on hover[cite: 7] */
 }
 
 .timeline-badge {
@@ -932,20 +934,20 @@ footer {
    ========================================================================== */
 
 #vision-outro {
-    padding: 30px 0 30px 0; /* Substantial breathing room before hitting the footer */
+    padding: 30px 0 30px 0; 
     text-align: center;
     display: flex;
     justify-content: center;
 }
 
 .outro-container {
-    max-width: 1000px; /* Constrains line length for premium readability */
+    max-width: 1000px; 
     margin: 0 auto;
 }
 
 .outro-tagline {
     display: inline-block;
-    color: var(--primary); /* Uses your brand light teal */
+    color: var(--primary); 
     font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
@@ -955,7 +957,7 @@ footer {
 }
 
 #vision-outro h2 {
-    color: var(--2ndary); /* Uses your signature deep teal */
+    color: var(--2ndary); 
     font-size: 2.2rem;
     line-height: 1.3;
     margin: 0 0 10px 0;
@@ -963,8 +965,8 @@ footer {
 }
 
 #vision-outro h3.text-mid-scale {
-    margin-top: 0;       /* Removes space above the headline */
-    margin-bottom: 8px;  /* Significantly tightens the gap directly below the headline */
+    margin-top: 0;       
+    margin-bottom: 8px;  
 }
 
 #vision-outro p {
@@ -973,6 +975,89 @@ footer {
     line-height: 1.7;
     margin: 0;
     font-weight: 400;
+}
+
+/* ==========================================================================
+   Fix #14: Enterprise Engagements Section Alignment
+   ========================================================================= */
+
+/* Fix Change 1: Standardizes title text properties to match other sections[cite: 7] */
+.section-title-neutral {
+    text-align: center;
+    color: var(--2ndary); /* Switches header from dark green to branding dark teal[cite: 7] */
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+/* Fix Change 3: Category Badges styled as a pale muted layout label[cite: 7] */
+.case-category-badge {
+    display: inline-block;
+    background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint[cite: 7] */
+    border: 1px solid rgba(136, 201, 208, 0.25);
+    color: var(--primary);                        /* High contrast legible brand text text */
+    padding: 4px 12px;
+    border-radius: 4px;                           
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Fix #15 & #16: Connective Transitions & Access Layouts
+   ========================================================================== */
+
+.section-transition-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin: 40px auto 0 auto;
+    max-width: 750px;
+}
+
+.timeline-transition-lead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.timeline-transition-footer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--2ndary);
+    text-align: center;
+    margin: 50px auto 0 auto;
+    letter-spacing: -0.2px;
+}
+
+.mid-page-action-line {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--2ndary);
+}
+
+.mid-page-action-line a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.mid-page-action-line a:hover {
+    border-bottom-color: var(--accent);
+    opacity: 0.8;
 }
 
 /* ==========================================================================
@@ -988,7 +1073,7 @@ footer {
     max-width: 800px;
     width: 100%;
     box-sizing: border-box;
-    text-align: left; /* Premium consulting frameworks look cleaner left-aligned */
+    text-align: left; 
 }
 
 .intro-left-column {
@@ -1005,31 +1090,31 @@ footer {
 .intro-tagline {
     font-family: 'Inter', sans-serif;
     color: var(--primary);
-    background-color: rgba(75, 138, 155, 0.08); /* 8% opacity of your primary teal */
+    background-color: rgba(75, 138, 155, 0.08); 
     border: 1px solid rgba(75, 138, 155, 0.15);
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    display: inline-block; /* Keeps the background from stretching full width */
+    display: inline-block; 
     padding: 4px 10px;
-    border-radius: 4px; /* Matches our small-tier radius standard */
+    border-radius: 4px; 
     margin-bottom: 16px;
 }
 
 .connect-premium-intro h3 {
     color: var(--2ndary);
-    font-size: 1.60rem;            /* Slightly reduced from 2.2rem to prevent premature text wrapping */
+    font-size: 1.60rem;            
     line-height: 1.3;
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.5px;
-    white-space: normal;        /* Allows normal text wrapping behavior */
-    word-break: keep-all;       /* Strictly prevents single words from breaking internally */
+    white-space: normal;        
+    word-break: keep-all;       
 }
 
 .connect-premium-intro .text-accent-color {
-    color: var(--primary); /* Keeps typography inside the elegant blue-teal scope */
+    color: var(--primary); 
 }
 
 .connect-cta-body {
@@ -1041,7 +1126,7 @@ footer {
 
 /* Elegant framed block specifically for your low-pressure baseline message */
 .connect-quote-box {
-    border-left: 3px solid var(--accent); /* Uses your professional orange accent line */
+    border-left: 3px solid var(--accent); 
     padding-left: 15px;
     margin: 5px 0 0 0;
 }
@@ -1056,6 +1141,7 @@ footer {
     line-height: 1.4;
     letter-spacing: -0.2px;
 }
+
 /* Direct Contact Channels Alignment */
 .connect-direct-channels {
     font-family: 'Inter', sans-serif;
@@ -1063,7 +1149,7 @@ footer {
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    margin: 8px 0 0 0; /* Creates an elegant, tight space directly below your call quote */
+    margin: 8px 0 0 0; 
     opacity: 0.8;
 }
 
@@ -1073,7 +1159,6 @@ footer {
 
 /* Tablet & Mobile Screens Context Layouts */
 @media (max-width: 768px) {
-    /* Responsive Bio Grid Image Alignment Fix[cite: 3] */
     .member, 
     .member-photo {
         margin-left: 0 !important;
@@ -1095,9 +1180,11 @@ footer {
         align-items: center;
     }
     
+    /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices[cite: 7] */
     .timeline-card {
         width: 100%;
         max-width: 450px;
+        border-top-color: rgba(75, 138, 155, 0.2); 
     }
 
     /* Asymmetric Premium Intro Adaptations */
@@ -1124,7 +1211,7 @@ footer {
     }
 
     .contact-form-container button.btn-cta {
-        width: 100%; /* Stretches button out to match finger strike targets on phones */
+        width: 100%; 
     }
 
     #vision-outro {
