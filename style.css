@@ -978,15 +978,22 @@ footer {
 }
 
 /* ==========================================================================
-   Fix #14: Enterprise Engagements Section Alignment
+   Fix #14: Enterprise Engagements Section Alignment & Spacing Balance
    ========================================================================= */
+
+/* Adjusted to match the exact spacing at the bottom of the section[cite: 7] */
+#featured-case {
+    padding-top: 10px;    /* Pulls the section up to eliminate the massive gap[cite: 7] */
+    padding-bottom: 50px; /* Perfectly balances the exit spacing hitting the Vision Outro[cite: 7] */
+}
 
 /* Fix Change 1: Standardizes title text properties to match other sections[cite: 7] */
 .section-title-neutral {
     text-align: center;
-    color: var(--2ndary); /* Switches header from dark green to branding dark teal[cite: 7] */
+    color: var(--primary); /* Updated to your brand primary color[cite: 7] */
     font-size: 2.2rem;
-    margin-bottom: 35px;
+    margin-top: 0;         /* Flattens top block compression[cite: 7] */
+    margin-bottom: 35px;   /* Clean breathing room to separate header from cards[cite: 7] */
     font-weight: 700;
 }
 
@@ -995,7 +1002,7 @@ footer {
     display: inline-block;
     background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint[cite: 7] */
     border: 1px solid rgba(136, 201, 208, 0.25);
-    color: var(--primary);                        /* High contrast legible brand text text */
+    color: var(--primary);                        
     padding: 4px 12px;
     border-radius: 4px;                           
     font-family: 'Inter', sans-serif;
@@ -1062,7 +1069,7 @@ footer {
 
 /* ==========================================================================
    Premium Editorial Connect Header Styling
-   ========================================================================== */
+   ========================================================================= */
 
 .connect-premium-intro {
     display: flex;
