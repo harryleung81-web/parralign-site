@@ -883,6 +883,11 @@ footer {
     margin-top: 20px;
 }
 
+.timeline-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
