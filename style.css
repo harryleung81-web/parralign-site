@@ -697,14 +697,75 @@ input:focus, textarea:focus {
     cursor: pointer;
 }
 
+/* ==========================================================================
+   Footer Component Expansion
+   ========================================================================= */
+
 footer {
     background-color: var(--2ndary); 
     color: #ffffff;            
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0; /* Slightly increased padding for multi-line breathing room */
     width: 100%;
     margin-top: auto; 
     flex-shrink: 0; 
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Uniform vertical space between copyright and links */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Links Wrapper layout */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Elegant, interactive link layout */
+.footer-link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Gap between the icon and text */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+/* Icon scaling utility */
+.footer-icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff; /* Sets the SVG icon color to white */
+    transition: fill 0.2s ease;
+}
+
+/* Hover Treatment: Highlights cleanly to light green accent color */
+.footer-link-item:hover {
+    color: var(--p2);
+    opacity: 1;
+}
+
+.footer-link-item:hover .footer-icon {
+    fill: var(--p2); /* Seamless color shift for the icon on hover */
 }
 
 /* ==========================================================================
