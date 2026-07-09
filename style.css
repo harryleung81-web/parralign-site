@@ -1131,20 +1131,22 @@ footer {
 .section-title-neutral {
     text-align: center;
     color: #ffffff;             /* Locks header cleanly to brand primary color */
-    margin-top: 0;              /* Squashes block padding bounds */
-    margin-bottom: 35px;        /* Clean separator before entering card grids */
     text-transform: none;       /* Relies on Title Case standard */
     
-    /* Font Adjustment */
+    /* 1. Font Adjustments */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: -0.5px;
     
-    /* Structural Underline Layout */
-    display: inline-block;      /* Limits the underline width to the text length */
-    border-bottom: 2px solid var(--primary); /* Uses your light blueish green accent line */
-    padding-bottom: 8px;        /* Breathing room between the text and the line */
+    /* 2. Sleek Underline (Matches text width) */
+    display: inline-block;      
+    border-bottom: 2px solid var(--primary); /* Smooth brand teal accent line */
+    padding-bottom: 8px;        /* Breathing room between text and line */
+
+    /* 3. Centering & Spacing Override */
+    display: table;             /* Forces inline behavior while respecting auto margins */
+    margin: 0 auto 35px auto;   /* Perfectly centers the block and sets bottom separation */
 }
 
 /* Micro-Badges / Taglines: Programmatic uppercase treatment with tracking overrides */
