@@ -1127,36 +1127,34 @@ footer {
    Fix #18: Design System Capitalization & Typographic Standardization Rules
    ========================================================================== */
 
+
+/* ==========================================================================
+   Fix #18: Design System Capitalization & Typographic Standardization Rules
+   ========================================================================== */
+
 /* Clean Title Case rule scaling safely across structural blocks */
 .section-title-neutral {
-    text-align: center;
-    color: #ffffff;             /* Locks header cleanly to brand primary color */
-    text-transform: none;       /* Relies on Title Case standard */
+    color: var(--2ndary);       /* Restores high-contrast dark teal against light wrappers */
+    text-transform: none;       /* Standardizes to Title Case rule across layout blocks */
     
-    /* 1. Font Adjustments */
+    /* Typographic Adjustments */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: -0.5px;
     
-    /* 2. Sleek Underline (Matches text width) */
-    display: inline-block;      
+    /* Centered Structural Underline (Text-Width Locked) */
+    display: table;             /* Restricts box width to exact length of the words */
+    margin: 0 auto 35px auto;   /* Centers the title perfectly and adds bottom breathing room */
     border-bottom: 2px solid var(--primary); /* Smooth brand teal accent line */
-    padding-bottom: 8px;        /* Breathing room between text and line */
-
-    /* 3. Centering & Spacing Override */
-    display: table;             /* Forces inline behavior while respecting auto margins */
-    margin: 0 auto 35px auto;   /* Perfectly centers the block and sets bottom separation */
+    padding-bottom: 8px;        /* Spacing between text and the underline */
 }
 
 /* Micro-Badges / Taglines: Programmatic uppercase treatment with tracking overrides */
-.outro-tagline,
-.intro-tagline {
+.intro-tagline, .outro-tagline {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.75rem !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important; /* Programmatically forces ALL CAPS */
-    letter-spacing: 2px !important;       /* Airy corporate aesthetic */
+    text-transform: uppercase !important; 
+    letter-spacing: 2px !important;
 }
 
 /* Option 1: Premium status badge container pill chip layout for Active Advisory */
