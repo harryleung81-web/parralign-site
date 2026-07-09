@@ -884,7 +884,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Fix #12: Redesigned to be borderless and flat at rest */
+/* Redesigned with a clean structural right edge layout */
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
@@ -895,14 +895,20 @@ footer {
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
-    border-right: 3px solid #eee; /* Border flat/invisible at rest */
+    
+    /* FIX: Standardized border declaration ensures color transition works smoothly */
+    border-right: 3px solid #eee; 
+    
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Fix #12: Matching the active hover treatment indicator highlight of your capabilities */
+/* Redesigned to slide horizontally to the left on hover */
 .timeline-card:hover {
+    /* FIX: Changed from translateY to translateX to shift horizontally to the left */
     transform: translateX(-4px);
-    border-right-color: var(--primary); /* Changes to primary teal border color on hover */
+    
+    /* Highlight color changes cleanly to branding primary teal */
+    border-right-color: var(--primary); 
 }
 
 .timeline-badge {
@@ -1195,12 +1201,14 @@ footer {
     }
     
     /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices */
+    /* Find this class inside your @media (max-width: 768px) block */
     .timeline-card {
         width: 100%;
         max-width: 450px;
-        border-top-color: rgba(75, 138, 155, 0.2); 
+        
+        /* FIX: Preserves right side color state on mobile platforms */
+        border-right-color: rgba(75, 138, 155, 0.2); 
     }
-
     /* Asymmetric Premium Intro Adaptations */
     .connect-premium-intro {
         flex-direction: column;
