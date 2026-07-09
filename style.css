@@ -1134,7 +1134,7 @@ footer {
 
 /* Clean Title Case rule scaling safely across structural blocks */
 .section-title-neutral {
-    color: var(--2ndary);       /* Restores high-contrast dark teal against light wrappers */
+    color: #ffffff;       /* Restores high-contrast dark teal against light wrappers */
     text-transform: none;       /* Standardizes to Title Case rule across layout blocks */
     
     /* Typographic Adjustments */
