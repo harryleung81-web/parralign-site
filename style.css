@@ -997,8 +997,8 @@ footer {
 
 .section-transition-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.15rem;
-    font-style: italic;
+    font-size: 1.0rem;
+    /* font-style: italic; */
     font-weight: 600;
     color: var(--primary);
     text-align: center;
