@@ -23,7 +23,7 @@ const teamData = {
 
 const whowhatourData = {
     'who': {
-        name: "Who We Are",
+        name: "WHO WE ARE",
         description: "Most businesses don't have a data problem, they have an alignment problem. We built Parralign because we spent decades on the client side of that exact problem — operators who owned and scaled complex enterprise operations from the inside, not outside theorists. We listen beyond the stated problem to what your organization actually needs, bridging the teams on the ground with the executives in the boardroom."
     },
     'what': {
