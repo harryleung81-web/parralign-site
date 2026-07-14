@@ -168,7 +168,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .hero p { 
     font-size: 1.2rem; 
-    color: var(--2ndary);
+    color: #d3d3d3;
     opacity: 0.9; 
     max-width: 800px; 
     margin: auto; 
