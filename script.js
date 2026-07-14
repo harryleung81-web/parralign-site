@@ -2,17 +2,17 @@ const teamData = {
     'mea': {
         name: "Mea Kwon",
         title: "Financial Services & Human Capital",
-        bio: "With 30 years at the intersection of financial services and human capital strategy, Mea transforms complex compensation data into clear narratives that drive business decisions. She has a proven track record of building scalable tools and processes that stick across organizations of every size."
+        bio: "With 30 years at the intersection of financial services and human capital strategy — including direct experience writing enterprise compensation plans — Mea transforms complex compensation data into clear narratives that drive business decisions. She has a proven track record of building scalable tools and processes that stick across organizations of every size."
     },
     'harry': {
         name: "Harry Leung",
         title: "Data Infrastructure & Architecture",
-        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don't yet know they have. With 15+ years designing resilient data architecture across talent and operations, he translates strategic intent into systems that work and scale."
+        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don’t yet know they have. With 15+ years designing resilient data architecture across talent and operations, he brings rare end-to-end Varicent depth — from requirements and compensation plan design through native development, data architecture, and implementation — including engineering cross-platform solutions that bring external calculation logic into Varicent when the platform alone isn’t enough. He translates strategic intent into systems that work and scale."
     },
     'nancy': {
         name: "Nancy Maloney",
-        title: "C.P.A. & Data Governance",
-        bio: "Nancy is a licensed C.P.A. with deep expertise in Data Governance, Data Quality, Metadata, Business Intelligence, and Risk. She brings clients a rare blend of analytical rigor and real-world operational know-how across finance, audit, and technology.​"
+        title: "CPA & Data Governance",
+        bio: "Nancy brings a rare combination of regulatory rigor and front-end solutioning experience — including FDIC audit and compliance work — that gives clients both the technical credibility and the operational instinct to get things right the first time. As a licensed CPA with deep expertise in Data Governance, Data Quality, Metadata, Business Intelligence, and Risk, she bridges the gap between what the data says and what the business actually needs."
     },
     'natalie': {
         name: "Natalie Johnson, Advisory",
