@@ -27,11 +27,11 @@ const whowhatourData = {
         description: "Most businesses don't have a data problem, they have an alignment problem. We built Parralign because we spent decades on the client side of that exact problem — operators who owned and scaled complex enterprise operations from the inside, not outside theorists. We listen beyond the stated problem to what your organization actually needs, bridging the teams on the ground with the executives in the boardroom."
     },
     'what': {
-        name: "What We Do",
+        name: "WHAT WE DO",
         description: "Behind every system are the people who run it — so we align incentives, teams, and structure, not just technology. We assess, redesign, and streamline critical workflows across compensation, talent operations, and finance, tracing operational friction down to its root cause and turning fractured configurations into seamless, automated workflows."  
             },
     'our': {
-        name: "Our Focus",
+        name: "OUR FOCUS",
         description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown.​"
     }
 };
