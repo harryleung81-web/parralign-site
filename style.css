@@ -98,7 +98,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 /* 4. Active state link treatment */
 .nav-links a.active {
     color: var(--primary);
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid #e67e22;
     padding-bottom: 5px; /* Ensures the line sits perfectly below the text */
 }
 
