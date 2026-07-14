@@ -898,10 +898,10 @@ footer p {
 .case-card-item {
     flex: 1 1 calc(50% - 15px); 
     min-width: 300px;           
-    background: rgba(255, 255, 255, 1);
+    background: rgba(206, 206, 206, 0.4);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(180, 180, 180, 0.5);
     box-sizing: border-box;
 }
 
