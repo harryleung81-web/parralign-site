@@ -883,7 +883,7 @@ footer p {
 
 .case-title {
     font-size: 2rem;
-    color: #ffffff;
+    color: var(--2ndary);
     margin-bottom: 30px;
 }
 
