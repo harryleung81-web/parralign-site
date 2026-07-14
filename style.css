@@ -964,6 +964,9 @@ footer p {
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
+
+    /* CHANGE THIS LINE FROM left TO center */
+    text-align: center;
     
     /* FIX: Standardized border declaration ensures color transition works smoothly */
     border-right: 3px solid #eee; 
