@@ -957,7 +957,6 @@ footer p {
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
-    justify-content: center;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     text-align: left;
@@ -991,12 +990,14 @@ footer p {
     padding: 2px 8px;
     border-radius: 4px;
     margin-bottom: 15px;
+  
 }
 
 .timeline-card h4 {
     color: var(--2ndary);
     font-size: 1.2rem;
     margin: 0 0 10px 0;
+    justify-content: center;
 }
 
 .timeline-card p {
@@ -1004,6 +1005,7 @@ footer p {
     line-height: 1.5;
     color: #555;
     margin: 0;
+    justify-content: center;
 }
 
 /* ==========================================================================
