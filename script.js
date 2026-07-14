@@ -1,3 +1,19 @@
+// --- Function for Active Page Navigation Underline (Multi-Page Optimized) ---
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the last part of the path (e.g., "team.html"), default to "index.html" if empty
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+
+        // Safe match check
+        if (currentPath === linkPath) {
+            link.classList.add("active");
+        }
+    });
+});
+
 const teamData = {
     'mea': {
         name: "Mea Kwon",
