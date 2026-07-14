@@ -909,7 +909,7 @@ footer p {
 .case-card-header h4 {
     margin: 0;
     font-size: 1.3rem;
-    color: var(--p2);
+    color: #173e5c;
 }
 
 .case-card-sub {
@@ -921,7 +921,7 @@ footer p {
 }
 
 .case-body-content h5 {
-    color: #021A30;
+    color: #497f85;
     font-size: 0.95rem;
     margin: 20px 0 5px 0;
     /*  text-transform: uppercase; */
@@ -930,7 +930,7 @@ footer p {
 
 .case-body-content p {
     font-size: 0.95rem;
-    color: #518b91;
+    color: #021A30;
     line-height: 1.6;
     margin: 0 0 15px 0;
     opacity: 0.9;
