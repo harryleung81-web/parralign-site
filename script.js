@@ -1,23 +1,3 @@
-// --- Function for Active Page Navigation Underline (Multi-Page Optimized) ---
-document.addEventListener("DOMContentLoaded", function () {
-    // 1. Grab the current file name, default to index.html, and force lowercase
-    const currentPath = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    navLinks.forEach(link => {
-        // 2. Extract just the file name from the link's href attribute and force lowercase
-        const linkPath = (link.getAttribute("href").split("/").pop() || "").toLowerCase();
-
-        // 3. Clean up any accidental home path variants (like empty string matching index)
-        if (currentPath === linkPath) {
-            link.classList.add("active");
-        } else if ((currentPath === "index.html" || currentPath === "") && linkPath === "index.html") {
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    });
-});
 const teamData = {
     'mea': {
         name: "Mea Kwon",
