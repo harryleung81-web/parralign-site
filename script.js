@@ -7,7 +7,7 @@ const teamData = {
     'harry': {
         name: "Harry Leung",
         title: "Data Infrastructure & Architecture",
-        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don’t yet know they have. With 15+ years designing resilient data architecture across talent and operations, he brings rare end-to-end Varicent depth — from requirements and compensation plan design through native development, data architecture, and implementation — including engineering cross-platform solutions that bring external calculation logic into Varicent when the platform alone isn’t enough. He translates strategic intent into systems that work and scale."
+        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don't yet know they have. With 15+ years designing resilient data architecture across talent and operations, he brings rare end-to-end Varicent depth — from requirements and compensation plan design through native development, data architecture, and implementation — including engineering cross-platform solutions that bring external calculation logic into Varicent when the platform alone isn’t enough. He translates strategic intent into systems that work and scale."
     },
     'nancy': {
         name: "Nancy Maloney",
