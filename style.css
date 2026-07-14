@@ -141,7 +141,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     font-size: 1.25rem;       /* Marginally larger than body text for editorial emphasis */
     font-weight: 600;          /* Medium-bold weight so it feels substantial */
     font-style: italic;        /* Italicized to denote a first-person guiding philosophy */
-    color: var(--2ndary);      /* Rendered in your deep branding teal instead of muted grey */
+    color: var(--primary);      /* Rendered in your deep branding teal instead of muted grey */
     line-height: 1.5;
     letter-spacing: -0.2px;
 }
