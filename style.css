@@ -496,7 +496,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 #bioName {
-    color: #ffffff;               
+    color: #ffffff;                
     font-size: 1.8rem;
     margin-bottom: 0;
 }
@@ -627,7 +627,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .contact-form-container { 
     width: 100%;       
     max-width: 1000px;  
-    margin: 10px auto; 
+    margin: 0 auto 10px auto; /* FIX: Reset top margin from 10px to 0 to collapse the space below links */
     background: #fff; 
     padding: 30px;     
     border-radius: 5px; 
@@ -960,13 +960,12 @@ footer p {
     padding: 30px 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-    text-align: left;
     flex: 1 1 calc(25% - 22px); 
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
 
-    /* CHANGE THIS LINE FROM left TO center */
+    /* Centered all typography components inside the cards */
     text-align: center;
     
     /* FIX: Standardized border declaration ensures color transition works smoothly */
@@ -1056,9 +1055,9 @@ footer p {
     display: inline-block;
     background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint */
     border: 1px solid rgba(136, 201, 208, 0.25);
-    color: var(--primary);                        
+    color: var(--primary);                                        
     padding: 4px 12px;
-    border-radius: 4px;                           
+    border-radius: 4px;                                           
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
@@ -1130,7 +1129,7 @@ footer p {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 40px auto 30px auto;
+    margin: 40px auto 15px auto; /* FIX: Reduced bottom margin from 30px to 15px to bring form container up */
     max-width: 800px;
     width: 100%;
     box-sizing: border-box;
@@ -1198,11 +1197,6 @@ footer p {
     margin: 8px 0 0 0; 
     opacity: 0.8;
 }
-
-/* ==========================================================================
-   Fix #18: Design System Capitalization & Typographic Standardization Rules
-   ========================================================================== */
-
 
 /* ==========================================================================
    Fix #18: Design System Capitalization & Typographic Standardization Rules
@@ -1283,12 +1277,12 @@ footer p {
 
     /* Process Timeline Mobile Adaptations */
     .timeline-grid {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
     
     /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices */
-    /* Find this class inside your @media (max-width: 768px) block */
     .timeline-card {
         width: 100%;
         max-width: 450px;
@@ -1299,8 +1293,14 @@ footer p {
     /* Asymmetric Premium Intro Adaptations */
     .connect-premium-intro {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         padding: 0 10px;
+    }
+    
+    /* Collapse the desktop flex values on mobile layout to shrink the space */
+    .intro-left-column,
+    .intro-right-column {
+        flex: 1 1 auto;
     }
     
     .connect-premium-intro h3 {
@@ -1308,7 +1308,7 @@ footer p {
     }
     
     .connect-quote-box {
-        margin-top: 10px;
+        margin-top: 0; /* FIX: Collapsed the mobile top margin of the quote block to pull content tighter */
     }
 }
 
