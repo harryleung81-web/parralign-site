@@ -997,7 +997,7 @@ footer p {
     color: var(--2ndary);
     font-size: 1.2rem;
     margin: 0 0 10px 0;
-    justify-content: center;
+    
 }
 
 .timeline-card p {
@@ -1005,7 +1005,7 @@ footer p {
     line-height: 1.5;
     color: #555;
     margin: 0;
-    justify-content: center;
+    
 }
 
 /* ==========================================================================
