@@ -627,7 +627,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .contact-form-container { 
     width: 100%;       
     max-width: 1000px;  
-    margin: 0 auto 10px auto; /* FIX: Reset top margin from 10px to 0 to collapse the space below links */
+    margin: 30px auto 10px auto; /* RESTORED: Generous 30px top margin keeps desktop elegant and breathable */
     background: #fff; 
     padding: 30px;     
     border-radius: 5px; 
@@ -1129,7 +1129,7 @@ footer p {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 40px auto 15px auto; /* FIX: Reduced bottom margin from 30px to 15px to bring form container up */
+    margin: 40px auto 35px auto; /* RESTORED: Generous 35px bottom margin ensures elegant desktop layout proportions */
     max-width: 800px;
     width: 100%;
     box-sizing: border-box;
@@ -1290,11 +1290,13 @@ footer p {
         /* FIX: Preserves right side color state on mobile platforms */
         border-right-color: rgba(75, 138, 155, 0.2); 
     }
-    /* Asymmetric Premium Intro Adaptations */
+    
+    /* Asymmetric Premium Intro Adaptations on Mobile */
     .connect-premium-intro {
         flex-direction: column;
         gap: 15px;
         padding: 0 10px;
+        margin-bottom: 15px; /* MOBILE-ONLY UPDATE: Shrinks the margin-bottom to bring form container up */
     }
     
     /* Collapse the desktop flex values on mobile layout to shrink the space */
@@ -1308,7 +1310,11 @@ footer p {
     }
     
     .connect-quote-box {
-        margin-top: 0; /* FIX: Collapsed the mobile top margin of the quote block to pull content tighter */
+        margin-top: 0; /* MOBILE-ONLY UPDATE: Tightens mobile space under links */
+    }
+
+    .contact-form-container {
+        margin: 0 auto 10px auto; /* MOBILE-ONLY UPDATE: Pulls form card tight against details only on smaller screens */
     }
 }
 
