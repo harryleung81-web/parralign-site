@@ -7,7 +7,7 @@ const teamData = {
     'harry': {
         name: "Harry Leung",
         title: "Data Infrastructure & Architecture",
-        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don’t yet know they have. With 15+ years designing resilient data architecture across talent and operations, he brings rare end-to-end Varicent depth — from requirements and compensation plan design through native development, data architecture, and implementation — including engineering cross-platform solutions that bring external calculation logic into Varicent when the platform alone isn’t enough. He translates strategic intent into systems that work and scale."
+        bio: "Harry specializes in data infrastructure that quietly eliminates problems most teams don't yet know they have. With 15+ years designing resilient data architecture across talent and operations, he brings rare end-to-end Varicent depth — from requirements and compensation plan design through native development, data architecture, and implementation — including engineering cross-platform solutions that bring external calculation logic into Varicent when the platform alone isn’t enough. He translates strategic intent into systems that work and scale."
     },
     'nancy': {
         name: "Nancy Maloney",
@@ -23,16 +23,16 @@ const teamData = {
 
 const whowhatourData = {
     'who': {
-        name: "Who We Are",
-        description: "Most business don’t have a data problem, they have an alignment problem. Executives want growth, managers want efficiency, and technical teams want clarity. We bridge all three. Parralign is a team of seasoned consultants with over 100 years of combined hands on experience in Data Analysis, Data Modeling, Data Governance, Business Intelligence, and Reporting – across HR, Finance, Accounting, Financial Services, and Healthcare."
+        name: "Who we are",
+        description: "Most businesses don't have a data problem, they have an alignment problem. We built Parralign because we spent decades on the client side of that exact problem — operators who owned and scaled complex enterprise operations from the inside, not outside theorists. We listen beyond the stated problem to what your organization actually needs, bridging the teams on the ground with the executives in the boardroom."
     },
     'what': {
-        name: "What We Do",
-        description: "We turn complex, tangled data challenges into clear, actionable solutions tailored to your business. Whether you’re struggling with operational inefficiencies, reporting gaps, or risk exposures, we deliver practical strategies that reduces friction, improve decision-making, and create measurable results – fast."
-    },
+        name: "What we do",
+        description: "Behind every system are the people who run it — so we align incentives, teams, and structure, not just technology. We assess, redesign, and streamline critical workflows across compensation, talent operations, and finance, tracing operational friction down to its root cause and turning fractured configurations into seamless, automated workflows."  
+            },
     'our': {
-        name: "Our Focus",
-        description: "We focus on companies from startup to established that need internal data infrastructure solutions that match their ambitions and goals. If your team is making decisions based on spreadsheets, disconnected systems or incomplete reporting, you’re exactly who we built parralign for.​"
+        name: "Our focus",
+        description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown.​"
     }
 };
 
@@ -63,20 +63,6 @@ function openBio(key) {
 function closeB3() { document.getElementById('b3Modal').style.display = "none"; }
 function closeBio() { document.getElementById('bioModal').style.display = "none"; }
 
-// --- SHARED CLICK-OUTSIDE LISTENER ---
-window.onclick = function(event) {
-    const bioModal = document.getElementById('bioModal');
-    const b3Modal = document.getElementById('b3Modal');
-
-    // These checks prevent the "null" error
-    if (bioModal && event.target === bioModal) {
-        bioModal.style.display = "none";
-    }
-    if (b3Modal && event.target === b3Modal) {
-        b3Modal.style.display = "none";
-    }
-};
-
 
 // --- Function for Contact Form & Success Modal ---
 const contactForm = document.getElementById('contactForm');
@@ -89,7 +75,6 @@ if (contactForm) {
         
         submitBtn.innerText = 'Sending...';
 
-        // These IDs come from your EmailJS Dashboard
         const serviceID = 'service_01ds56n';
         const templateID = 'template_0p8574y';
 
@@ -110,7 +95,7 @@ function closeSuccessModal() {
     document.getElementById('successModal').style.display = "none";
 }
 
-// Update your window.onclick to also close the success modal
+// --- SHARED CLICK-OUTSIDE LISTENER ---
 window.onclick = function(event) {
     const bioModal = document.getElementById('bioModal');
     const b3Modal = document.getElementById('b3Modal');

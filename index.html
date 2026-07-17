@@ -10,60 +10,228 @@
 </head>
 
 <body>
-	<header class="sticky-nav">
-   	<div class="logo-container">
+    <header class="sticky-nav">
+        <div class="logo-container">
             <a href="index.html">
                 <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="nav-logo">
             </a>
-   	</div>
+        </div>
 
-
-	<div class="nav-links">
-	    <a href="index.html">Home</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
             <a href="team.html">Meet The Team</a>
-            <a href="connect.html" class="btn-cta">Let's Connect</a>
+            <a href="connect.html">Let's Connect</a>
         </div>
-	<div class="nav-divider">
-	</div>
-	</header>
+        <div class="nav-divider"></div>
+    </header>
 
-	<header class="hero">
-    <div class="container">
-        <h1>Operational clarity, built on business expertise.</h1>
-        <p>Parralign partners with organizations to assess, redesign, and streamline processes for compensation, talent operations, finance, and beyond.</p>
+    <header class="hero">
+        <div class="container">
+            <h1>Operational clarity, built on business expertise.</h1>
+            <p>Parralign partners with organizations to assess, redesign, and streamline processes for compensation, talent operations, finance, and beyond.</p>
+            
+            <section id="whowhatour">
+                <div class="grid" style="margin-top: 50px;">
+                    <div class="wwo" onclick="openB3('who')">
+                        <h4>Who we are</h4>
+                    </div>
+                    <div class="wwo" onclick="openB3('what')">
+                        <h4>What we do</h4>
+                    </div>
+                    <div class="wwo" onclick="openB3('our')">
+                        <h4>Our focus</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header> 
+
+    <main class="container">
+        <section id="track-record" style="padding: 60px 0 30px 0;">
+            <div class="story-split">
+                <div class="story-text">
+                    <h3>We didn't learn this from a client. We lived it as one.</h3>
+                    <p>Parralign is a co-founding team of three — each with a distinct expertise that together forms a full-cycle capability. We owned, scaled, and optimized enterprise operations from the inside: the individual contributors, the managers, and the people translating solutions upward to executives.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-card">
+                        <div class="stat-number">$741M</div>
+                        <div class="stat-label">Annual Compensation Managed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1,000+</div>
+                        <div class="stat-label">Sales Officers Paid Accurately</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Zero</div>
+                        <div class="stat-label">Migration Downtime Mid-Acquisition</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">360°</div>
+                        <div class="stat-label">Business Integration, Cross-Functional Enablement</div>
+                    </div>
+                </div>
+            </div>
+            <p class="section-transition-text">Here's what that experience looks like when it's applied to problems most implementations never reach.</p>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 0 0;">
+
+        <section id="capabilities" style="padding: 40px 0;">
+            <h2 class="section-title" style="margin-top: 10px;">Builds others said couldn't be done</h2>
+            
+            <p class="subtitle">We learned Varicent from the inside out as users who depended on it. That depth is what made our creative solutions possible.</p>
+            <div class="section-lead-in">
+                Enterprise problems — solved entirely inside the platform.
+            </div>  
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>01 / Compensation Addendums With Real-time Tracking</h4>
+                    <p>Unique goals, thresholds, and multi-tier sign-off routing — built inside the platform, not managed in spreadsheets.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>02 / ESPP Automation</h4>
+                    <p>An HR and payroll workflow with full audit compliance. What took days of manual back-and-forth now completes in under 30 minutes.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>03 / Risk & Compliance Clawback Monitoring</h4>
+                    <p>Self-service monitoring across lending, deposits, and wealth — one source of truth ahead of board presentations.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>04 / Cross-Departmental Crediting</h4>
+                    <p>When the CRM couldn't support shared credit across departments, we built the mechanism inside the platform instead.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>05 / On-Prem To Cloud Migration</h4>
+                    <p>A live compensation platform moved mid-acquisition with zero downtime. Stability and compliance engineered in from the start.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>06 / Enterprise Data Governance</h4>
+                    <p>Ongoing checks across finance systems that catch data problems at the source — before they reach board reporting.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0 20px 0;">
+                <p class="mid-page-action-line">Seen enough? <a href="connect.html">Let's talk.</a></p>
+            </div>
+        </section>
         
-		<section id="whowhatour">
-        <div class="grid" style="margin-top: 50px;">
-            <div class="wwo" onclick="openB3('who')">
-                <h4>Who We Are</h4>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 0 0;">
+        
+        <section id="featured-case">
+            <div class="case-container">
+                <h3 class="section-title-neutral">Enterprise Engagements</h3>
+                
+                <div class="case-two-column-grid">
+                    <div class="case-card-item">
+                        <div class="case-card-header">
+                            <span class="case-category-badge">INFRASTRUCTURE &amp; IMPLEMENTATION</span>
+                            <h4>Major national financial institution</h4>
+                        </div>
+                        <div class="case-body-content">
+                            <h5>The situation</h5>
+                            <p>We owned compensation alignment. What we found went deeper — data silos creating inconsistency across audit, compliance, and compensation accuracy. The client knew something was wrong but couldn't identify where it was coming from.</p>
+                            
+                            <h5>Our approach</h5>
+                            <p>Instead of patching calculation scripts, we rebuilt the workflow logic from first principles, unified data expectations, and delivered an automated, audit-ready pipeline across every department.</p>
+                            
+                            <h5>The outcome</h5>
+                            <p>What started as a localized repair became the firm's core operational intelligence engine — zero downtime, $741M in compensation managed accurately, and full audit-ready reporting across sales, ops, finance, HR, risk, compliance, and executive leadership — even as the institution changed hands.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-card-item">
+                        <div class="case-card-header">
+                            <span class="case-category-badge">DIAGNOSTIC &amp; ADVISORY</span>
+                            <h4>Regional banking group</h4>
+                        </div>
+                        <div class="case-body-content">
+                            <h5>The situation</h5>
+                            <p>Engaged to assist with sales compensation. What we found was wider — key functionality the sales team was asking for didn't exist, front-end reporting didn't reflect back-end data, and plan logic had been built literally rather than with an understanding of the underlying compensation design.</p>
+                            
+                            <h5>Our approach</h5>
+                            <p>We mapped the full landscape — front-end gaps, structural misalignments, compensation outputs misaligned with the intended plan design, and risks that without correction would compound over time. We delivered 24 pages of findings, corrections, and a prioritized build roadmap covering what would need to be rebuilt and why.</p>
+                            
+                            <h5>The outcome</h5>
+                            <p>The engagement surfaced what a more targeted implementation would require to get right, giving leadership a clear picture of the gaps, the corrections needed, and a path to building it the way it should have been built from the start.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="wwo" onclick="openB3('what')">
-                <h4>What We Do</h4>
+        </section>
+
+        <!-- <section id="vision-outro">
+            <div class="outro-container">
+                <span class="outro-tagline">Beyond the Fix</span>
+                <h3 class="text-mid-scale">We don't just repair what's broken. We reveal what's possible.</h3>
+                <p>Dashboards that tell stories. Cross-team views no one thought possible. Real-time clarity that gives teams the confidence to act — and improves the way your whole business runs.</p>
+            </div> 
+        </section> -->
+    </main>
+
+    <section id="process-timeline" class="process-bg-wrapper">
+        <div class="container">
+           <!-- <p class="timeline-transition-lead">And the way we get there is always the same.</p> -->
+            
+            <h2 class="section-title">How we work with you</h2>
+            <div class="section-lead-in" style="margin-bottom: 40px;">
+                "We meet you where the friction is."
             </div>
-            <div class="wwo" onclick="openB3('our')">
-                <h4>Our Focus</h4>
+
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <h4>Diagnose</h4>
+                    <p>We come in, listen carefully, and find the root cause — not just the stated one—so the problem stays solved.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Stabilize</h4>
+                    <p>Frustrated teams don't need to start over. We make precise corrections and leave the system working as it should have from day one.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Communicate</h4>
+                    <p>We go deep with the teams on the ground and speak plainly to the boardroom — turning operational detail into strategic decisions.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Enable</h4>
+                    <p>We don't create dependence — we leave your team with a system they fully own, understand, and can run long-term.</p>
+                </div>
             </div>
+
+            <p class="timeline-transition-footer">If any of this sounds familiar, that's not a coincidence.</p>
         </div>
-			</section>
-    </div>
-</header> 
+    </section>
 
-<div id="b3Modal" class="modal">
-    <div class="modal-content">
-		<span class="close-btn" onclick="closeB3()">&times;</span>
-		<img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="modal-logo">
-        <h2 id="b3Name"></h2>
-        <hr>
-        <p id="b3description"></p>
+    <div id="b3Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeB3()">&times;</span>
+            <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="modal-logo">
+            <h2 id="b3Name"></h2>
+            <hr>
+            <p id="b3description"></p>
+        </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2026 PARRALIGN. All rights reserved. | info@parralign.com</p>
+    <footer>
+    <div class="footer-container">
+        <p>&copy; 2026 parralign. All rights reserved. | info@parralign.com</p>
+        
+        <!-- Add your new linked icon and text channel here -->
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/company/parralign" target="_blank" rel="noopener" class="footer-link-item">
+                <!-- Inline SVG Icon (Example: LinkedIn) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-icon">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                
+            </a>
+        </div>
+    </div>
 </footer>
 
-   
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

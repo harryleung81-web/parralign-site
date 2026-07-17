@@ -1,7 +1,7 @@
 /* Variables: Store colors here to reuse them easily throughout the file */
 :root {
     --primary: #4b8a9b; /* Light blueish green #88c9d0; */
-	--p2: #88c9d0;
+    --p2: #88c9d0;
     --2ndary: #244D57;  /* Dark Teal */
     --accent: #e67e22;  /* Professional Orange */
     --text: #333;       /* Main text color   */
@@ -26,7 +26,7 @@ body {
 }
 
 /* Use Poppins for all titles to make them "pop" */
-h1, h2, h3, h4, .section-title, .subtitle {
+h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 700; /* Makes Poppins look its best */
     letter-spacing: -0.5px; /* Poppins looks great with tight spacing in headers */
@@ -45,7 +45,6 @@ h1, h2, h3, h4, .section-title, .subtitle {
     top: 0;
     background-color: #ffffff; /* Prevents hero from showing through the nav */
     z-index: 1000;             /* Ensures it stays above the hero and grid */
-    /* width: 100%; */
     flex-shrink: 0; /* Prevents the nav from squishing */
 }
 
@@ -69,17 +68,13 @@ h1, h2, h3, h4, .section-title, .subtitle {
     opacity: 0.8; 
 }
 
-
-
-
-
 /* 1. Center the links in the nav container */
 .nav-links {
     display: flex;
     justify-content: center; /* Centers links horizontally */
     gap: 10px;               /* Adds space between each link */
     padding-bottom: 15px;    /* Space between links and the divider line */
-	align-items: center;    /* Keeps links and button vertically aligned */
+    align-items: center;    /* Keeps links and button vertically aligned */
 }
 
 /* 2. Style the links to look like normal text */
@@ -92,35 +87,35 @@ h1, h2, h3, h4, .section-title, .subtitle {
     font-weight: 600;          /* Normal text weight */
     font-size: 0.85rem;
     transition: color 0.3s ease; /* Smooth color change on hover */
-
-    
-    padding: 7px 10px ;     /* Adds a clickable "cushion" around the text */
+    padding: 7px 10px;     /* Adds a clickable "cushion" around the text */
 }
 
 /* 3. Add a hover effect so users know they are clickable */
 .nav-links a:hover {
-     /* opacity: 0.8;     Changes to light color */
     color: var(--primary);
 }
 
+/* 4. Active state link treatment */
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 5px; /* Ensures the line sits perfectly below the text */
+}
+
 .btn-cta { 
-	background: var(--accent); 
-	color: #fff !important; 
-	padding: 12px 12px;
-	margin: 0 0 0 20px !important;
-	min-width: auto;   /* This forces the button to stay wide even with short words */
-	text-align: center; /* This ensures "Contact" stays centered in that wide box */
-	
-   	border-radius: 5px; 
-	text-decoration: none; 
-	display: inline-block; 
-	border: none;
-	/* Ensures the button text doesn't wrap to a new line */
-        white-space: nowrap;
-	/* Ensure the vertical alignment matches other links */
+    background: var(--accent); 
+    color: #fff !important; 
+    padding: 12px 12px;
+    margin: 0 0 0 20px !important;
+    min-width: auto;   /* This forces the button to stay wide even with short words */
+    text-align: center; /* This ensures "Contact" stays centered in that wide box */
+    border-radius: 6px; 
+    text-decoration: none; 
+    display: inline-block; 
+    border: none;
+    white-space: nowrap; /* Ensures the button text doesn't wrap to a new line */
     align-self: center; 
     transition: opacity 0.3s ease;
-	
 }
 
 /* 2. Hover effect: Change opacity */
@@ -137,67 +132,72 @@ h1, h2, h3, h4, .section-title, .subtitle {
     margin: 0px 0 10px 0;
 }
 
+/* Section 2 Lead-In Typography Embellishment */
+.section-lead-in {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px auto; /* Ample space below to separate cleanly from the card grid */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;       /* Marginally larger than body text for editorial emphasis */
+    font-weight: 600;          /* Medium-bold weight so it feels substantial */
+    font-style: italic;        /* Italicized to denote a first-person guiding philosophy */
+    color: var(--primary);      /* Rendered in your deep branding teal instead of muted grey */
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+}
 
-/* Hero */
-/* Update your Hero section */
+/* Hero Section- the background of the main */
 .hero { 
     background: var(--primary); 
     color: #fff; 
     text-align: center; 
-    
-    /* This is the magic part */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Centers the text vertically */
     align-items: center;     /* Centers the text horizontally */
-
-	flex-grow: 1;            /* Forces hero to fill every pixel left on the screen */
-    min-height: auto; /* Fallback for older browsers */
-    
-    padding: 60px 10px;
-    
-    /* min-height: 100vh;       /* Forces it to take up the full screen height */
+    min-height: auto; 
+    padding: 30px 10px;
     box-sizing: border-box;
-    
 }
 
-
 .hero h1 { 
-	font-size: 2.8rem; 
-	margin-bottom: 15px; 
-	margin: 0 auto; 
+    font-size: 2.8rem; 
+    margin-bottom: 15px; 
+    margin: 0 auto; 
 }
 
 .hero p { 
-	font-size: 1.2rem; 
-	opacity: 0.9; 
-	max-width: 800px; 
-	margin: auto; 
+    font-size: 1.2rem; 
+    color: #d3d3d3;
+    opacity: 0.9; 
+    max-width: 800px; 
+    margin: auto; 
 }
-
 
 /* Grid & Cards */
-.section-title { text-align: center; 
-		margin: 40px 0 20px; 
-		font-size: 2.5rem; 
+.section-title { 
+    text-align: center; 
+    margin: 40px 0 20px; 
+    font-size: 2.5rem; 
+    color: var(--2ndary);
+    text-transform: none; /* Enforces clean Title Case layout scaling across components */
 }
 
-.subtitle { text-align: center; 
-	margin-bottom: 40px; 
-	color: #666; 
+.subtitle { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    color: #666; 
 }
-
-
 
 .grid { 
-    display: flex;             /* Changed from grid to flex */
-    flex-direction: row;      /* Forces items into a line */
-    flex-wrap: wrap;           /* Allows items to move to a new row */
-    justify-content: center;   /* Centers the items in the bottom row */
+    display: flex;             
+    flex-direction: row;      
+    flex-wrap: wrap;           
+    justify-content: center;   
     gap: 30px; 
-    max-width: 1100px;         /* Keeps it aligned with your container */
-    margin: 0 auto;            /* Centers the entire grid container */
-    width: 100%
+    max-width: 1100px;         
+    margin: 0 auto;            
+    width: 100%;
 }
 
 .card { 
@@ -211,11 +211,8 @@ h1, h2, h3, h4, .section-title, .subtitle {
     flex-direction: column; 
     justify-content: space-between;
     box-sizing: border-box;
-
-    /* --- THE FIX: Forces 3 in a row --- */
-    /* 33.3% minus the gaps */
     flex: 0 1 calc(33.333% - 20px); 
-    min-width: 280px; /* Ensures they stack on small mobile screens */
+    min-width: 280px; 
 }
 
 .card:hover {
@@ -230,30 +227,23 @@ h1, h2, h3, h4, .section-title, .subtitle {
 
 /* Full-width light grey background for the Process Section */
 .process-bg-wrapper {
-    background-color: #f9f9f9; /* Matches your leadership team background */
+    background-color: #f9f9f9; 
     width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    padding: 40px 0 80px; /* Adds breathing room at top and bottom */
+    padding: 40px 0 80px; 
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
 
-
-
-
-/* --- UPDATED: Fixed width for 3-per-row logic --- */
+/* Team Members Layout */
 .member { 
     cursor: pointer; 
-    /* This calculation accounts for the 30px gaps to fit exactly 3 items */
     flex: 0 1 calc(32% - 10px); 
-    min-width: 250px;          /* Prevents them from getting too skinny */
-    
-   /*
-	 /* Keep your existing styles below */
+    min-width: 250px;          
     background: #ffffff;  
     padding: 30px;  
     border-radius: 12px;  
@@ -264,40 +254,43 @@ h1, h2, h3, h4, .section-title, .subtitle {
     flex-direction: column;  
     justify-content: space-between;
     box-sizing: border-box;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-/* --- NEW: Tighten Name and Title Spacing --- */
+/* Responsive Image Polish for Member Bio Grid */
+.member-photo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 6px;
+}
+
 .member h4 {
     margin-top: 0;
-    margin-bottom: 2px; /* Moves the name very close to the title */
+    margin-bottom: 2px; 
 }
 
 .member p {
-    margin: 0;         /* Removes the big gaps between lines */
-    line-height: 1.1;  /* Keeps the professional titles compact */
-min-height: 1.1em;
+    margin: 0;         
+    line-height: 1.1;  
+    min-height: 1.1em;
 }
 
-/* Optional: If you want the Expertise line to be slightly lower than the 'Founding Partner' line */
 .member p + p {
     margin-top: 10px; 
     font-size: 0.95rem;
     opacity: 0.7;
-	min-height: 2.3em;
+    min-height: 2.3em;
 }
 
-/* Apply Times New Roman to the first line of the title */
 .member p:first-of-type {
     font-family: 'Inter', sans-serif;
-    font-style: italic; /* Optional: Makes it look more like a formal signature/title */ 
+    font-style: italic;  
     font-size: 0.85rem;
     font-weight: 500;
-    /*color: var(--2ndary); Keeps it within your teal brand color */
     margin-bottom: 2px;
 }
-
-
 
 .member:hover { 
     background-color: #f9f9f9; 
@@ -305,160 +298,137 @@ min-height: 1.1em;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-.card h3 { 
-	color: var(--accent); 
-	margin-bottom: 15px; 
-}
-
-
 /* whowhatour Section Spacing */
 #whowhatour { 
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    /* Reduced margin from 150px to 60px to sit closer to the smaller hero */
     margin-top: 60px; 
     padding-bottom: 80px; 
 }
 
-/* Target only the grid inside the Who/What/Our section */
 #whowhatour .grid {
     display: flex;
     justify-content: center;
-    gap: 80px;        /* Large gap only for the squares */
+    gap: 30px;        
     max-width: 1100px; 
-    margin: 60px auto 0 auto; /* 40px top margin separates it from the hero text */
-	width: 100%;
+    margin: 60px auto 0 auto; 
+    width: 100%;
 }
 
-
-
-/* --- UPDATED: Fixed width for 3-per-row logic --- */
 .wwo { 
     cursor: pointer; 
-	transition: transform 0.2s ease, background-color 0.2s ease;
-    /* This calculation accounts for the 30px gaps to fit exactly 3 items */
-    flex: 0 1 200px; 
-    height: 170px;          /* Prevents them from getting too skinny */
-    
-   /* THE SQUARE FIX */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 250px;          
+    height: 170px;          
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers text vertically */
-    align-items: center;     /* Centers text horizontally */
-    
-    /* Colors & Styling */
+    justify-content: center; 
+    align-items: center;     
     background: #ffffff; 
     color: #ffffff;
     padding: 20px; 
-    border-radius: 20px; /* Changed from 12px to 0 for a sharp "square" look */
-    box-shadow: 0 10px 10px rgba(0,0,0,0.4); 
+    border-radius: 12px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
     text-align: center; 
     box-sizing: border-box;
-	
 }
 
-
-/* --- NEW: Tighten Name and Title Spacing --- */
-/* Target the text inside the home page squares */
 .wwo h4 {
-    font-size: 1.2rem;       /* Increase this (e.g., 1.8rem) for even bigger text */
-    text-transform: uppercase; /* Optional: Makes it look more like a formal button */
-    letter-spacing: 1px;     /* Adds "air" between letters for clarity */
-    margin: 0;               /* Removes default browser spacing */
-    color: var(--2ndary);          /* Ensures it stays white against the primary color */
+    font-size: 1.8rem;       
+    /*  text-transform: uppercase; */
+    letter-spacing: 1px;     
+    margin: 0;               
+    color: var(--2ndary);          
     line-height: 1.2;
     text-align: center;
 }
 
 .wwo p {
-    margin: 0;         /* Removes the big gaps between lines */
-    line-height: 1.1;  /* Keeps the professional titles compact */
-	min-height: 1.1em;
+    margin: 0;         
+    line-height: 1.1;  
+    min-height: 1.1em;
 }
 
-/* Optional: If you want the Expertise line to be slightly lower than the 'Founding Partner' line */
 .wwo p + p {
     margin-top: 10px; 
     font-size: 0.95rem;
     opacity: 0.7;
-	min-height: 2.3em;
-	color: var(--2ndary);
+    min-height: 2.3em;
+    color: var(--2ndary);
 }
 
-/* Apply Times New Roman to the first line of the title */
 .wwo p:first-of-type {
     font-family: 'Inter', sans-serif;
-    font-style: italic; /* Optional: Makes it look more like a formal signature/title */ 
+    font-style: italic; 
     font-size: 0.85rem;
     font-weight: 500;
-    /*color: var(--2ndary); Keeps it within your teal brand color */
     margin-bottom: 2px;
 }
-
-
 
 .wwo:hover { 
     background-color: var(--2ndary); 
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.8);
 }
+
 .wwo:hover h4, 
 .wwo:hover p {
     color: #ffffff !important;
 }
-
  
-/* Specifically targeting the "MEET OUR TEAM" heading */
 .leadership-section .subtitle {
-    font-size: 2.5rem;   /* Increase this number to make it bigger, decrease for smaller */
-    font-weight: 700;    /* Optional: Makes the font bolder */
-    margin-top: 5px;    /* Adds some breathing room above the title */
-    margin-bottom: 5px; /* Space between this title and the "100+ years" subtitle */
-	color: var(--2ndary)
+    font-size: 2.5rem;   
+    font-weight: 700;    
+    margin-top: 5px;    
+    margin-bottom: 5px; 
+    color: var(--2ndary);
 }
 
-/* Optional: If you want to change the "100+ Years" caption size too */
 .subtitle-caption {
     font-size: 1.1rem;   
     font-style: italic;
     color: var(--primary);
     text-align: center;
-
 }
-/* Team Section Spacing */
-#team { flex-grow: 1; 
+
+#team { 
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    margin: 0; /* Ensures no white space above or below */
+    margin: 0; 
 }
-/* 3. THE TEAM PAGE (The clean, standard cards) */
+
 #team .grid {
-    gap: 30px;            /* Tighter space for professional headshots */
+    gap: 30px;            
     margin-top: 40px;
     max-width: 1100px;
 }
 
-
-/* Full-width light grey background */
 .team-bg-wrapper {
-   	background-color: #eeeeee;
-    width: 100%; /* Changed from 100vw to 100% since it's no longer nested */
-    padding: 60px 0; /* Adjust this number to control top/bottom internal air */
+    background-color: #eeeeee;
+    width: 100%; 
+    padding: 60px 0; 
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    
-    /* This ensures it touches the footer and nav exactly */
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-	margin: 0;
+    margin: 0;
 }
 
+/* Custom font scale utility */
+.text-mid-scale {
+    font-size: 1.85rem;       
+    line-height: 1.4;
+    font-weight: 700;          
+    font-family: 'Poppins', sans-serif; 
+    color: var(--2ndary);      
+}
 
-/* --- REVISED TRANSPARENT MODAL --- */
-/* Shared Modal Overlay */
+/* Modals Architecture */
 .modal {
     display: none; 
     position: fixed;
@@ -467,15 +437,14 @@ min-height: 1.1em;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.50); /* Darkened background */
-    backdrop-filter: blur(40px); /* Blur effect for site background */
+    background-color: rgba(0, 0, 0, 0.50); 
+    backdrop-filter: blur(40px); 
 }
 
-/* SHARED MODAL CONTENT (Applies to both B3 and Bio) */
 .modal-content {
-    position: relative;        /* Required for the absolute logo anchor */
+    position: relative;        
     margin: 10% auto;
-    padding: 70px 40px 40px;   /* Room for logo (Top: 70px) */
+    padding: 70px 40px 40px;   
     border-radius: 12px;
     width: 80%;
     max-width: 600px;
@@ -484,105 +453,82 @@ min-height: 1.1em;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Style the logo inside the modal */
 #b3Modal .modal-logo {
     position: absolute;
     top: 20px;
     left: 20px;
-    height: 35px; /* Adjust height as needed */
+    height: 35px; 
     width: auto;
-    opacity: 0.8; /* Optional: makes it slightly subtle */
-	z-index: 10; /* Ensures it stays above the frosted glass effect */
+    opacity: 0.8; 
+    z-index: 10; 
 }
 
-
-/* --- B3 MODAL (Home Page) --- */
 #b3Modal .modal-content {
-    background-color: rgba(255, 255, 255, 0); /* Transparent white box */
-    backdrop-filter: blur(1px); /* Frosted glass effect for the box itself */
-    
-    /* border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
-    /*margin: 10% auto;
-    padding: 70px 40px 40px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    color: #ffffff; /* Text color changed to white for readability on dark bkg */
-    /*box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-	padding-top: 60px; /* Adds space at the top so the logo doesn't hit the text */
+    background-color: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(1px); 
 }
 
 #b3Name {
     text-align: center;
     width: 100%;
-    color: #ffffff;      /* Forces the font color to white */
+    color: #ffffff;      
     margin-bottom: 10px;
-    font-size: 2rem;     /* Optional: makes the header stand out more */
+    font-size: 2rem;     
 }
 
 #b3description {
     text-align: center;
 }
 
-/* --- BIO MODAL (Team Page) --- */
 #bioModal .modal-content {
-    background-color: #151922; /* Transparent white box rgba(255, 255, 255, 0.15); */
-    backdrop-filter: blur(15px); /* Frosted glass effect for the box itself */
+    background-color: #151922; 
+    backdrop-filter: blur(15px); 
     padding-top: 40px;
-    /* border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
-    /*margin: 10% auto;
-    padding: 40px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    color: #ffffff; /* Text color changed to white for readability on dark bkg */
-    /* box-shadow: 0 20px 40px rgba(0,0,0,0.4); */
-}
-/* Style the logo inside the modal */
-#bioModal .modal-logo {
-    position: relative; /* Switch from absolute to relative */
-    display: block;      /* Allows centering via margin */
-    margin: 0 auto 20px auto; /* Centers horizontally and adds 20px space below */
-    top: 0;              /* Resets the 20px top from the general style */
-    left: 0;             /* Resets the 20px left from the general style */
-    height: 30px;        /* Optional: Make it slightly larger if it's a centerpiece */
 }
 
+#bioModal .modal-logo {
+    position: relative; 
+    display: block;      
+    margin: 0 auto 20px auto; 
+    top: 0;              
+    left: 0;             
+    height: 30px;        
+}
 
 #bioName {
-    color: #ffffff;               /* Brand color for names */
+    color: #ffffff;                
     font-size: 1.8rem;
     margin-bottom: 0;
 }
 
 #bioTitle {
     font-style: italic;
-	color: #ececec;
+    color: #ececec;
     opacity: 0.8;
     margin-top: 5px;
 }
-.modal-content hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 20px 0; }
 
-/* --- SUCCESS MODAL STYLES --- */
+.modal-content hr { 
+    border: 0; 
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    margin: 20px 0; 
+}
 
-/* The Background Overlay */
+/* Success Modal Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(36, 77, 87, 0.85); /* rgba(36, 77, 87, 0.85) Uses your --2ndary teal with transparency */
-    backdrop-filter: blur(8px);        /* Soft blur effect to keep focus on the message */
-    display: none;                     /* Hidden by default, shown via JS flex */
+    background: rgba(36, 77, 87, 0.85); 
+    backdrop-filter: blur(8px);        
+    display: none;                     
     justify-content: center;
     align-items: center;
-    z-index: 9999;                     /* Ensures it stays above the sticky nav */
+    z-index: 9999;                     
 }
 
-/* The Success Box */
 .modal-content-success {
     background: #ffffff;
     padding: 40px;
@@ -591,13 +537,12 @@ min-height: 1.1em;
     max-width: 450px;
     width: 90%;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    animation: modalPop 0.3s ease-out; /* Smooth pop-in animation */
+    animation: modalPop 0.3s ease-out; 
 }
 
-/* The Checkmark Circle */
 .modal-icon-success {
     font-size: 50px;
-    color: #2ecc71; /* Success Green */
+    color: #2ecc71; 
     background: #e8f8f0;
     width: 80px;
     height: 80px;
@@ -618,20 +563,17 @@ min-height: 1.1em;
     font-size: 1rem;
 }
 
-/* Animation for the popup */
 @keyframes modalPop {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* 1. The Container for the background */
 .success-bg-img {
-    position: relative; /* Required for the absolute image inside */
-    overflow: hidden;   /* Keeps the image corners rounded to match the box */
+    position: relative; 
+    overflow: hidden;   
     background: #ffffff; 
 }
 
-/* 2. The Faded Image Layer */
 .success-bg-img::before {
     content: "";
     position: absolute;
@@ -639,27 +581,18 @@ min-height: 1.1em;
     left: 0;
     width: 100%; 
     height: 100%;
-    
-    /* REPLACE 'image/pf2.png' with your desired background image path */
     background-image: url('image/ParralignTransP.png'); 
-    
     background-size: contain;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    
-    /* CONTROL THE FADE: 0.05 is very faint, 0.2 is clearly visible */
     opacity: 0.1; 
-    
-    z-index: 0; /* Puts image behind text */
+    z-index: 0; 
 }
 
-/* 3. Ensure text and button stay above the image */
 .modal-inner {
     position: relative;
     z-index: 1; 
 }
-
-
 
 .close-btn {
     position: absolute;
@@ -674,125 +607,750 @@ min-height: 1.1em;
 
 .close-btn:hover { color: var(--accent); }
 
-/* Contact Form */
+/* Contact Interface */
 #contact { 
-    margin-bottom: 0; /* Remove the gap */
-    flex-grow: 1;     /* Tells the section to grow to the footer */
+    margin-bottom: 0; 
+    flex-grow: 1;     
     display: flex;
     flex-direction: column;
 }
 
-/* 1. Ensure the container inside the wrapper stays wide */
 .contact-bg-wrapper .container {
     width: 100%;
-    max-width: 1100px; /* Matches your other sections */
+    max-width: 1100px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the title and form */
+    align-items: center; 
 }
 
 .contact-form-container { 
-    width: 100%;       /* Forces it to take up the available container space */
-    max-width: 1000px;  /* Keeps it at a professional, readable width */
-    margin: 10px auto; /* Centers it horizontally */
+    width: 100%;       
+    max-width: 1000px;  
+    margin: 30px auto 10px auto; /* RESTORED: Generous 30px top margin keeps desktop elegant and breathable */
     background: #fff; 
-    padding: 30px;     /* Increased padding for a more premium feel */
+    padding: 30px;     
     border-radius: 5px; 
     box-shadow: 0 30px 30px rgba(0,0,0,0.05); 
-    box-sizing: border-box; /* Vital: prevents padding from adding to the width */
+    box-sizing: border-box; 
 }
 
 .contact-bg-wrapper {
     background-color: #f9f9f9;
-    width: 100%;       /* Changed from 100vw */
+    width: 100%;       
     padding: 20px 0;   
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    
-    /* ADD THESE FOR THE FOOTER TOUCH */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 1;      /* This is the magic that fills the gap */
+    flex-grow: 1;      
     margin: 0;
 }
 
-/* 3. Ensure the Submit button doesn't look tiny on mobile 
-*/
 .contact-form-container button.btn-cta {
-    width: 100%;       /* Default to full width on small screens */
-    max-width: 250px;  /* But cap it so it's not giant on desktop */
-    margin: 20px auto 0; /* Centers the button under the textarea */
-    display: block;    /* Required for auto-margins to work */
+    width: 100%;       
+    max-width: 250px;  
+    margin: 20px auto 0; 
+    display: block;    
     cursor: pointer;
 }
 
 .form-group { 
-	display: flex; 
-	gap: 15px; 
-	margin-bottom: 15px; 
-	width: 100%;
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 15px; 
+    width: 100%;
 }
 
 input, textarea { 
-	width: 100%; 
-	padding: 12px; 
-	border: 1px solid #ddd; 
-	border-radius: 5px; 
-	font-family: inherit; 
-	margin-bottom: 10px; 
-
-	box-sizing: border-box;
-	/* --- ADD THESE TWO LINES --- */
-    font-weight: 400;      /* Makes the text bold */
-    color: black;  /* Optional: Using your teal color makes bold text look sharper */
-
+    width: 100%; 
+    padding: 14px 16px; 
+    border: 1px solid #e2e8f0; 
+    background-color: #f8fafc;
+    border-radius: 6px; 
+    font-family: inherit; 
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-weight: 400;      
+    color: #1e293b;  
+    transition: all 0.2s ease;
 }
-/* Specific adjustment for the Contact Title */
+
+/* Subtle accent focus states when typing */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(75, 138, 155, 0.15);
+}
+
 #contact .section-title {
-    font-family: 'Inter', sans-serif; /* Forces it to match the rest of the site */
-    font-size: 2.5rem;               /* Reduced from 2.5rem to look more balanced */
+    font-family: 'Inter', sans-serif; 
+    font-size: 2.5rem;               
     font-weight: 700;
-    /* letter-spacing: 1px; */
-    /* text-transform: uppercase; */
-    margin-bottom: 10px;             /* Space between title and the white form box */
-    color: var(--2ndary);            /* Uses your Dark Teal for a professional look */
+    margin-bottom: 10px;             
+    color: var(--2ndary);            
 }
 
-/* Target the submit button specifically */
 .contact-form-container button.btn-cta {
-    font-size: 1.1rem;       /* Makes the text larger */
-    font-weight: 700;        /* Makes the text bold (Poppins looks great at 700) */
-    text-transform: uppercase; /* Keeps it professional and consistent with nav */
-    letter-spacing: 0.5px;     /* Adds a bit of "air" between the letters */
-    padding: 10px 15px;      /* Increases the button height for a better click area */
-    transition: transform 0.2s ease; /* Smooth "pop" effect on hover */
+    font-size: 1rem;       
+    font-weight: 700;        
+    /*  text-transform: uppercase; */
+    letter-spacing: 0.5px;     
+    padding: 14px 28px;      
+    margin: 10px 0 0 0 !important; 
+    width: auto;                  
+    display: inline-block;
+    cursor: pointer;
 }
 
-/* Centering the footer content */
+/* ==========================================================================
+   Footer Component Expansion
+   ========================================================================= */
+
 footer {
-    background-color: var(--2ndary); /* Dark grey/charcoal */
-    color: #ffffff;            /* Makes the text white so it's readable */
+    background-color: var(--2ndary); 
+    color: #ffffff;            
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0; /* Slightly increased padding for multi-line breathing room */
     width: 100%;
-
-    margin-top: auto; /* Pushes the footer to the very bottom */
-	flex-shrink: 0; /* Keeps the footer from collapsing */
+    margin-top: auto; 
+    flex-shrink: 0; 
 }
 
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Uniform vertical space between copyright and links */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2rem; /* Shrinks the headline slightly on phones */
+/* Links Wrapper layout */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Elegant, interactive link layout */
+.footer-link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Gap between the icon and text */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+/* Icon scaling utility */
+.footer-icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff; /* Sets the SVG icon color to white */
+    transition: fill 0.2s ease;
+}
+
+/* Hover Treatment: Highlights cleanly to light green accent color */
+.footer-link-item:hover {
+    color: var(--p2);
+    opacity: 1;
+}
+
+.footer-link-item:hover .footer-icon {
+    fill: var(--p2); /* Seamless color shift for the icon on hover */
+}
+
+/* ==========================================================================
+   Pitch Deck Integration Elements
+   ========================================================================= */
+
+.story-split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.story-text {
+    flex: 1 1 500px;
+}
+
+.story-text h3 {
+    color: var(--2ndary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    flex: 1 1 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    border-left: 4px solid var(--primary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--2ndary);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-card-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    margin: 40px 0;
+}
+
+.tech-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 3px solid #eee;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.tech-card h4 {
+    color: var(--2ndary);
+    font-size: 1.25rem;
+    margin: 0 0 12px 0;
+}
+
+.tech-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+.case-container {
+    background: #ededed;
+    color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    margin: 60px 0 20px 0; 
+    box-shadow: 0 20px 40px rgba(36, 77, 87, 0.15);
+}
+
+.case-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.case-title {
+    font-size: 2rem;
+    color: var(--2ndary);
+    margin-bottom: 30px;
+}
+
+/* Two Column Case Study Grid Layout */
+.case-two-column-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px; 
+    width: 100%;
+}
+
+.case-card-item {
+    flex: 1 1 calc(50% - 15px); 
+    min-width: 300px;           
+    background: rgba(206, 206, 206, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    box-sizing: border-box;
+}
+
+.case-card-header h4 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #173e5c;
+}
+
+.case-card-sub {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.case-body-content h5 {
+    color: #497f85;
+    font-size: 0.95rem;
+    margin: 20px 0 5px 0;
+    /*  text-transform: uppercase; */
+    letter-spacing: 0.5px;
+}
+
+.case-body-content p {
+    font-size: 0.95rem;
+    color: #021A30;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+}
+
+.case-body-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Timeline Process Section Styling
+   ========================================================================== */
+
+.timeline-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Redesigned with a clean structural right edge layout */
+.timeline-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    flex: 1 1 calc(25% - 22px); 
+    min-width: 230px;           
+    position: relative;
+    box-sizing: border-box;
+
+    /* Centered all typography components inside the cards */
+    text-align: center;
+    
+    /* FIX: Standardized border declaration ensures color transition works smoothly */
+    border-right: 3px solid #eee; 
+    
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Redesigned to slide horizontally to the left on hover */
+.timeline-card:hover {
+    /* FIX: Changed from translateY to translateX to shift horizontally to the left */
+    transform: translateX(-4px);
+    
+    /* Highlight color changes cleanly to branding primary teal */
+    border-right-color: var(--primary); 
+}
+
+.timeline-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(75, 138, 155, 0.1);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  
+}
+
+.timeline-card h4 {
+    color: var(--2ndary);
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    
+}
+
+/* ==========================================================================
+   Vision Outro Section Styling
+   ========================================================================== */
+
+#vision-outro {
+    padding: 30px 0 30px 0; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.outro-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+#vision-outro h3.text-mid-scale {
+    margin-top: 0;       
+    margin-bottom: 8px;  
+}
+
+#vision-outro p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   Fix #14: Enterprise Engagements Section Alignment & Spacing Balance
+   ========================================================================= */
+
+/* Adjusted to safely match vertical space padding above and below cards */
+#featured-case {
+    padding-top: 10px;    /* Pulls section up to remove large structural space above */
+    padding-bottom: 50px; /* Perfectly standardizes and matches exit spacing onto Outro text */
+}
+
+/* Fix Change 3: Category Badges styled as a pale muted layout label */
+.case-category-badge {
+    display: inline-block;
+    background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint */
+    border: 1px solid rgba(136, 201, 208, 0.25);
+    color: var(--primary);                                        
+    padding: 4px 12px;
+    border-radius: 4px;                                           
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    /*  text-transform: uppercase; */
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Fix #15 & #16: Connective Transitions & Access Layouts
+   ========================================================================== */
+
+.section-transition-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin: 40px auto 0 auto;
+    max-width: 750px;
+}
+
+.timeline-transition-lead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.timeline-transition-footer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--2ndary);
+    text-align: center;
+    margin: 50px auto 0 auto;
+    letter-spacing: -0.2px;
+}
+
+.mid-page-action-line {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--2ndary);
+}
+
+.mid-page-action-line a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.mid-page-action-line a:hover {
+    border-bottom-color: var(--accent);
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Premium Editorial Connect Header Styling
+   ========================================================================= */
+
+.connect-premium-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto 35px auto; /* RESTORED: Generous 35px bottom margin ensures elegant desktop layout proportions */
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; 
+}
+
+.intro-left-column {
+    flex: 1 1 360px;
+}
+
+.intro-right-column {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.connect-premium-intro h3 {
+    color: var(--2ndary);
+    font-size: 1.60rem;            
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    white-space: normal;        
+    word-break: keep-all;       
+}
+
+.connect-premium-intro .text-accent-color {
+    color: var(--primary); 
+}
+
+.connect-cta-body {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+/* Elegant framed block specifically for your low-pressure baseline message */
+.connect-quote-box {
+    border-left: 3px solid var(--accent); 
+    padding-left: 15px;
+    margin: 5px 0 0 0;
+}
+
+.connect-cta-highlight {
+    font-family: 'Poppins', sans-serif;
+    color: var(--2ndary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+}
+
+/* Direct Contact Channels Alignment */
+.connect-direct-channels {
+    font-family: 'Inter', sans-serif;
+    color: var(--2ndary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 8px 0 0 0; 
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Fix #18: Design System Capitalization & Typographic Standardization Rules
+   ========================================================================== */
+
+/* Clean Title Case rule scaling safely across structural blocks */
+.section-title-neutral {
+    color: var(--2ndary);       /* Restores high-contrast dark teal against light wrappers */
+    text-transform: none;       /* Standardizes to Title Case rule across layout blocks */
+    
+    /* Typographic Adjustments */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+    
+    /* Centered Structural Underline (Text-Width Locked) */
+    display: table;             /* Restricts box width to exact length of the words */
+    margin: 0 auto 35px auto;   /* Centers the title perfectly and adds bottom breathing room */
+    border-bottom: 2px solid var(--primary); /* Smooth brand teal accent line */
+    padding-bottom: 8px;        /* Spacing between text and the underline */
+}
+
+/* Micro-Badges / Taglines: Programmatic uppercase treatment with tracking overrides */
+.intro-tagline, .outro-tagline {
+    font-family: 'Inter', sans-serif !important;
+   /*  text-transform: uppercase !important;  */
+    letter-spacing: 2px !important;
+}
+
+/* Option 1: Premium status badge container pill chip layout for Active Advisory */
+.intro-tagline {
+    color: var(--primary);
+    background-color: rgba(75, 138, 155, 0.08); 
+    border: 1px solid rgba(75, 138, 155, 0.15);
+    display: inline-block; 
+    padding: 4px 10px;
+    border-radius: 4px; 
+    margin-bottom: 16px;
+}
+
+/* Outro tagline specific layout alignment variables */
+.outro-tagline {
+    display: inline-block;
+    color: var(--primary); 
+    margin-bottom: 15px;
+}
+
+/* Heading formatting across child information architectures */
+.tech-card h4,
+.timeline-card h4,
+.case-card-header h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: none; /* Safely balances hierarchy against top-tier sections */
+}
+
+/* ==========================================================================
+   Media Queries & Responsive Overrides
+   ========================================================================== */
+
+/* Tablet & Mobile Screens Context Layouts */
+@media (max-width: 768px) {
+    .member, 
+    .member-photo {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center;
     }
-	.modal-logo {
+    
+    #team .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Process Timeline Mobile Adaptations */
+    .timeline-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices */
+    .timeline-card {
+        width: 100%;
+        max-width: 450px;
+        
+        /* FIX: Preserves right side color state on mobile platforms */
+        border-right-color: rgba(75, 138, 155, 0.2); 
+    }
+    
+    /* Asymmetric Premium Intro Adaptations on Mobile */
+    .connect-premium-intro {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+        margin-bottom: 15px; /* MOBILE-ONLY UPDATE: Shrinks the margin-bottom to bring form container up */
+    }
+    
+    /* Collapse the desktop flex values on mobile layout to shrink the space */
+    .intro-left-column,
+    .intro-right-column {
+        flex: 1 1 auto;
+    }
+    
+    .connect-premium-intro h3 {
+        font-size: 1.8rem;
+    }
+    
+    .connect-quote-box {
+        margin-top: 0; /* MOBILE-ONLY UPDATE: Tightens mobile space under links */
+    }
+
+    .contact-form-container {
+        margin: 0 auto 10px auto; /* MOBILE-ONLY UPDATE: Pulls form card tight against details only on smaller screens */
+    }
+}
+
+/* Mobile Specific Optimizations */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-form-container button.btn-cta {
+        width: 100%; 
+    }
+
+    #vision-outro {
+        padding: 50px 0 60px 0;
+    }
+
+    #vision-outro h2 {
+        font-size: 1.7rem;
+    }
+
+    #vision-outro p {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem; 
+    }
+
+    .modal-logo {
         height: 30px;
         top: 15px;
         left: 15px;
     }
+
     .modal-content {
         padding-top: 50px;
     }
