@@ -1260,14 +1260,26 @@ footer p {
    ========================================================================== */
 
 /* Tablet & Mobile Screens Context Layouts */
+/* Tablet & Mobile Screens Context Layouts */
 @media (max-width: 768px) {
-    .member, 
-    .member-photo {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    /* Keep the card's structure but constrain its width so it centers nicely */
+    .member {
+        width: 100%;
+        max-width: 340px;      /* Prevents the card from stretching too wide on tablet */
+        margin: 0 auto 20px;   /* Perfectly centers the card on the page and adds vertical space */
+        padding: 30px 20px;    /* Restores breathing room inside the card */
         text-align: center;
+    }
+    
+    /* Keep the photo perfectly round and centered */
+    .member-photo {
+        margin: 0 auto 15px !important; /* Forces the image to center on mobile */
+    }
+    
+    #team .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     #team .grid {
