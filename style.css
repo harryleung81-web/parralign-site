@@ -259,11 +259,12 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 /* Responsive Image Polish for Member Bio Grid */
 .member-photo {
-    max-width: 100%;
-    height: auto;
+    width: 200px;         /* 1. Sets a uniform width */
+    height: 200px;        /* 2. Sets a uniform height */
+    object-fit: cover;    /* 3. Crops the image to fit the box without stretching */
+    border-radius: 50%;   /* 4. Optional: Makes them perfect circles (remove if you want squares) */
     display: block;
-    margin: 0 auto 15px auto;
-    border-radius: 6px;
+    margin: 0 auto 15px;  /* Centers the image and adds space below it */
 }
 
 .member h4 {
