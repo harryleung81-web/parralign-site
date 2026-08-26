@@ -1374,12 +1374,12 @@ footer p {
     0%, 100% {
         color: #ffffff; /* Stark white base */
     }
-    50% {
+    40% {
         color: #00316E; /* Shifts to your brand orange #e67e22 */
     }
 }
 
 .flashing-text {
-    animation: color-flash 5.5s infinite ease-in-out;
+    animation: color-flash 8.5s infinite ease-in-out;
     font-weight: 600; /* Ensures thin letterforms stay legible during transition */
 }
