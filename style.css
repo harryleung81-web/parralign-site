@@ -1368,3 +1368,23 @@ footer p {
         padding-top: 50px;
     }
 }
+
+/* ==========================================================================
+   Flashing Text Animation
+   ========================================================================== */
+
+/* Defines a smooth fading pulse */
+@keyframes flash-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25; /* Controls transparency at the lowest point of the flash */
+    }
+}
+
+/* Class to apply to the HTML target */
+.flashing-text {
+    animation: flash-pulse 1.8s infinite ease-in-out;
+    color: var(--primary); /* Uses your existing light blueish-green variable */
+}
