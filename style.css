@@ -1380,6 +1380,6 @@ footer p {
 }
 
 .flashing-text {
-    animation: color-flash 8.5s infinite ease-in-out;
+    animation: color-flash 10.5s infinite ease-in-out;
     font-weight: 600; /* Ensures thin letterforms stay legible during transition */
 }
