@@ -1375,7 +1375,7 @@ footer p {
         color: #ffffff; /* Stark white base */
     }
     40% {
-        color: #00316E; /* Shifts to your brand orange #e67e22 */
+        color: var(--2ndary); /* Shifts to your brand orange #e67e22 */
     }
 }
 
