@@ -1336,6 +1336,11 @@ footer p {
     .contact-form-container {
         margin: 0 auto 10px auto; /* MOBILE-ONLY UPDATE: Pulls form card tight against details only on smaller screens */
     }
+    
+    .hero h1 {
+        white-space: normal;
+        font-size: 1.8rem;
+    }
 }
 
 /* Mobile Specific Optimizations */
