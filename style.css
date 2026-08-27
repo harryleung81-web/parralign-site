@@ -168,12 +168,10 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .hero p { 
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     color: #FFFFFF;
     opacity: 0.9; 
-    max-width: 1100px;   /* Expanded from 800px to match your site container width */
-    width: 100%;         /* Spans full available space */
-    white-space: nowrap; /* Forces text to stay on one single row */
+    max-width: 800px; 
     margin: auto; 
 }
 
