@@ -147,24 +147,29 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 /* Hero Section- the background of the main */
+/* Hero Section - Wrapper Expansion */
 .hero { 
     background: var(--primary); 
     color: #fff; 
     text-align: center; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Centers the text vertically */
-    align-items: center;     /* Centers the text horizontally */
+    justify-content: flex-start; 
+    align-items: center; 
     min-height: auto; 
-    padding: 30px 20px; /* Increased side padding slightly */
+    padding: 30px 10px; /* Reduced side padding to give max horizontal width */
     box-sizing: border-box;
-    width: 100%; /* Ensures full wrapper expansion */
+    width: 100%;
 }
 
+/* Hero H1 - Forced Single Line Expansion */
 .hero h1 { 
-    font-size: 3.0rem; 
+    font-size: 2.8rem;   /* Adjusted scale to fit standard desktop displays */
     margin-bottom: 15px; 
     margin: 0 auto; 
+    width: 100%;
+    max-width: 1400px;   /* Widens bounding box beyond default 800px / 1100px caps */
+    white-space: nowrap; /* Strictly prevents the title from wrapping to a second line */
 }
 
 .hero p { 
