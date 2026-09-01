@@ -172,13 +172,14 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .hero-image {
     width: 100%;
     height: auto;
-    min-height: 580px; /* Provides sufficient height for even spacing */
+    min-height: 380px; /* Reduced from 580px to bring text and buttons closer together */
+    max-height: 450px; /* Cap the max height on wide screens */
     object-fit: cover;
     display: block;
     border-radius: 0;
 }
 
-/* Overlay Layer with Evenly Divided Vertical Spacing */
+/* 2. Adjust overlay padding to fit the narrower height */
 .hero-overlay-content {
     position: absolute;
     top: 0;
@@ -187,14 +188,13 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* Divides top, bottom, and inter-element spacing equally */
     justify-content: space-evenly; 
     align-items: center;
     text-align: center;
-    padding: 0 20px; /* Horizontal padding for mobile edges */
+    padding: 20px 20px; /* Reduced vertical padding */
     box-sizing: border-box;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop */
+    background: rgba(0, 0, 0, 0.40);
 }
 
 /* Remove default vertical margins so space-evenly handles spacing cleanly */
@@ -233,18 +233,18 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .wwo { 
     cursor: pointer; 
-    text-decoration: none; /* Removes underline for <a> tags */
+    text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease;
     flex: 1 1 calc(33.333% - 20px); 
     min-width: 250px;          
-    height: 130px;          
+    height: 110px; /* Reduced from 130px */         
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;     
     background: #ffffff; 
     color: #ffffff;
-    padding: 20px; 
+    padding: 15px; 
     border-radius: 12px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
     text-align: center; 
