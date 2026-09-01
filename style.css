@@ -146,61 +146,61 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 /* ==========================================================================
-   Hero Section Layout (Image Background with Content Overlay & 1cm Margin)
+   Hero Section Layout (Full-Bleed Width & Evenly Distributed Spacing)
    ========================================================================== */
 
 .hero { 
     background: var(--primary); 
     width: 100%;
-    padding: 1cm 0; /* Ensures exactly 1cm colored background on top and bottom */
+    padding: 1cm 0; /* Keeps 1cm colored background on top and bottom */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Relative Wrapper to anchor absolute content overlay */
+/* Relative Wrapper - 100% width touches left and right edges */
 .hero-wrapper {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Image background inside the wrapper */
+/* Image background extending edge-to-edge */
 .hero-image {
     width: 100%;
     height: auto;
-    min-height: 520px; /* Provides ample vertical height for overlay content */
+    min-height: 580px; /* Provides sufficient height for even spacing */
     object-fit: cover;
-    border-radius: 8px;
     display: block;
+    border-radius: 0;
 }
 
-/* Overlay Layer centered on top of the image */
+/* Overlay Layer with Evenly Divided Vertical Spacing */
 .hero-overlay-content {
     position: absolute;
     top: 0;
-    left: 20px;  /* Matches hero-wrapper horizontal padding */
-    right: 20px;
+    left: 0;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Divides top, bottom, and inter-element spacing equally */
+    justify-content: space-evenly; 
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 0 20px; /* Horizontal padding for mobile edges */
     box-sizing: border-box;
-    z-index: 2; /* Sits directly above the image */
-    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop for high typography contrast */
-    border-radius: 8px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop */
 }
 
+/* Remove default vertical margins so space-evenly handles spacing cleanly */
 .hero h1 { 
     font-size: 2.8rem;   
-    margin: 0 auto 20px auto; 
+    margin: 0 auto; 
     width: 100%;
     max-width: 1400px;   
     white-space: nowrap; 
@@ -212,17 +212,14 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     color: #FFFFFF;
     opacity: 0.95; 
     max-width: 800px; 
-    margin: auto; 
+    margin: 0 auto; 
 }
 
-/* Hero Anchor Links (WWO Cards Overlay) */
+/* WWO Hero Anchor Buttons Section */
 #whowhatour { 
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px; 
-    padding-bottom: 0; 
     width: 100%;
+    margin: 0; 
+    padding-bottom: 0;
 }
 
 #whowhatour .grid {
@@ -240,7 +237,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     transition: transform 0.2s ease, background-color 0.2s ease;
     flex: 1 1 calc(33.333% - 20px); 
     min-width: 250px;          
-    height: 140px;          
+    height: 130px;          
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -941,10 +938,10 @@ footer p {
 /* Media Queries & Responsive Overrides */
 @media (max-width: 768px) {
     .hero-overlay-content {
-        position: relative; /* Unstacks overlay on smaller screens so text/buttons expand naturally */
-        left: 0;
-        right: 0;
+        position: relative; /* Allows content to expand naturally on smaller screens */
+        padding: 40px 20px;
         background: rgba(0, 0, 0, 0.55);
+        gap: 30px;
     }
 
     .hero-image {
