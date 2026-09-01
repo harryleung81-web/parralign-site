@@ -9,14 +9,14 @@
 
 /* Global Page Behavior */
 html {
-    scroll-behavior: smooth; /* Smooth gliding when clicking links */
-    scroll-padding-top: 100px; /* Prevents sticky headers from covering content */
+    scroll-behavior: smooth; /* Smooth gliding when clicking in-page anchor links */
+    scroll-padding-top: 100px; /* Prevents sticky headers from covering content upon jump */
 }
 
 /* Base Body Styles */
 body { 
     font-family: 'Poppins', sans-serif; 
-    margin: 0;             /* Removes default browser spacing */
+    margin: 0;              /* Removes default browser spacing */
     color: var(--text);   /* Uses the variable defined in :root */
     line-height: 1.6;      /* Increases vertical space between lines for readability */
 
@@ -44,7 +44,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     position: sticky;
     top: 0;
     background-color: #ffffff; /* Prevents hero from showing through the nav */
-    z-index: 1000;             /* Ensures it stays above the hero and grid */
+    z-index: 1000;              /* Ensures it stays above the hero and grid */
     flex-shrink: 0; /* Prevents the nav from squishing */
 }
 
@@ -52,15 +52,15 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .logo-container {
     display: flex;            /* Enables Flexbox layout */
     justify-content: center;   /* Centers the logo horizontally */
-    align-items: center;       /* Centers the logo vertically (if container has height) */
-    padding-top: 20px;         /* Adjust this number to add more or less space from the top */
-    padding-bottom: 10px;      /* Optional: adds space between logo and the divider below */
+    align-items: center;       /* Centers the logo vertically */
+    padding-top: 20px;         
+    padding-bottom: 10px;      
 }
 
 /* Adjust the size of the logo image */
 .nav-logo { 
-    height: 60px;            /* Change this value to make it smaller (e.g., 30px) or larger */
-    width: auto;             /* Keeps the image proportions so it doesn't look squished */
+    height: 60px;            
+    width: auto;              /* Keeps the image proportions so it doesn't look squished */
     transition: opacity 0.3s ease; 
 }
 
@@ -68,7 +68,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     opacity: 0.8; 
 }
 
-/* 1. Center the links in the nav container */
+/* Center the links in the nav container */
 .nav-links {
     display: flex;
     justify-content: center; /* Centers links horizontally */
@@ -77,29 +77,29 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     align-items: center;    /* Keeps links and button vertically aligned */
 }
 
-/* 2. Style the links to look like normal text */
+/* Style the links to look like normal text */
 .nav-links a {
-    text-decoration: none;     /* Removes the underline */
+    text-decoration: none;      /* Removes the underline */
     color: var(--text);        /* Uses your #333 dark grey color */
     margin: 0 15px;            /* Increased horizontal air between links */
     letter-spacing: 1px;       /* Subtle space between letters for clarity */
-    text-transform: uppercase; /* Optional: adds a formal, airy feel */
-    font-weight: 600;          /* Normal text weight */
+    text-transform: uppercase; /* Formal, airy feel */
+    font-weight: 600;          
     font-size: 0.85rem;
     transition: color 0.3s ease; /* Smooth color change on hover */
     padding: 7px 10px;     /* Adds a clickable "cushion" around the text */
 }
 
-/* 3. Add a hover effect so users know they are clickable */
+/* Hover effect */
 .nav-links a:hover {
     color: var(--primary);
 }
 
-/* 4. Active state link treatment */
+/* Active state link treatment */
 .nav-links a.active {
     color: var(--primary);
     border-bottom: 2px solid #e67e22;
-    padding-bottom: 5px; /* Ensures the line sits perfectly below the text */
+    padding-bottom: 5px; 
 }
 
 .btn-cta { 
@@ -107,24 +107,23 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     color: #fff !important; 
     padding: 12px 12px;
     margin: 0 0 0 20px !important;
-    min-width: auto;   /* This forces the button to stay wide even with short words */
-    text-align: center; /* This ensures "Contact" stays centered in that wide box */
+    min-width: auto;   
+    text-align: center; 
     border-radius: 6px; 
     text-decoration: none; 
     display: inline-block; 
     border: none;
-    white-space: nowrap; /* Ensures the button text doesn't wrap to a new line */
+    white-space: nowrap; 
     align-self: center; 
     transition: opacity 0.3s ease;
 }
 
-/* 2. Hover effect: Change opacity */
 .btn-cta:hover {
     opacity: 0.5;
-    color: #fff !important; /* Keeps text white on hover instead of turning primary color */
+    color: #fff !important; 
 }
 
-/* Line Divider: Touches both sides of webpage */
+/* Line Divider */
 .nav-divider {
     width: 100%;
     height: 2px;
@@ -132,69 +131,146 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin: 0px 0 10px 0;
 }
 
-/* Section 2 Lead-In Typography Embellishment */
+/* Section Lead-In Typography Embellishment */
 .section-lead-in {
     text-align: center;
     max-width: 850px;
-    margin: 0 auto 50px auto; /* Ample space below to separate cleanly from the card grid */
+    margin: 0 auto 50px auto; 
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;       /* Marginally larger than body text for editorial emphasis */
-    font-weight: 600;          /* Medium-bold weight so it feels substantial */
-    font-style: italic;        /* Italicized to denote a first-person guiding philosophy */
-    color: var(--primary);      /* Rendered in your deep branding teal instead of muted grey */
+    font-size: 1.25rem;       
+    font-weight: 600;          
+    font-style: italic;        
+    color: var(--primary);      
     line-height: 1.5;
     letter-spacing: -0.2px;
 }
 
-/* Hero Section- the background of the main */
-/* Hero Section - Wrapper Expansion */
+/* ==========================================================================
+   Hero Section Layout (Image Background with Content Overlay & 1cm Margin)
+   ========================================================================== */
+
 .hero { 
     background: var(--primary); 
     width: 100%;
+    padding: 1cm 0; /* Ensures exactly 1cm colored background on top and bottom */
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Sets exactly 1cm of colored background space at top and bottom */
-    padding: 1cm 0; 
-    box-sizing: border-box;
 }
 
-.hero-image-container {
+/* Relative Wrapper to anchor absolute content overlay */
+.hero-wrapper {
+    position: relative;
     width: 100%;
-    max-width: 1200px; /* Adjust if you want the image wider/narrower */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px; /* Side padding so the image doesn't touch the screen edges on smaller devices */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
+/* Image background inside the wrapper */
 .hero-image {
     width: 100%;
     height: auto;
-    max-height: 500px; /* Adjust height to control how tall the hero region stretches */
-    object-fit: cover;  /* Ensures the picture cleanly fills the box without stretching */
-    border-radius: 8px; /* Optional: gives a slight rounded corner to the image */
+    min-height: 520px; /* Provides ample vertical height for overlay content */
+    object-fit: cover;
+    border-radius: 8px;
     display: block;
 }
 
-/* Hero H1 - Forced Single Line Expansion */
+/* Overlay Layer centered on top of the image */
+.hero-overlay-content {
+    position: absolute;
+    top: 0;
+    left: 20px;  /* Matches hero-wrapper horizontal padding */
+    right: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 2; /* Sits directly above the image */
+    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop for high typography contrast */
+    border-radius: 8px;
+}
+
 .hero h1 { 
-    font-size: 2.8rem;   /* Adjusted scale to fit standard desktop displays */
-    margin-bottom: 20px; 
-    margin: 0 auto; 
+    font-size: 2.8rem;   
+    margin: 0 auto 20px auto; 
     width: 100%;
-    max-width: 1400px;   /* Widens bounding box beyond default 800px / 1100px caps */
-    white-space: nowrap; /* Strictly prevents the title from wrapping to a second line */
+    max-width: 1400px;   
+    white-space: nowrap; 
 }
 
 .hero p { 
     font-size: 1.2rem;
     font-style: italic;
     color: #FFFFFF;
-    opacity: 0.9; 
+    opacity: 0.95; 
     max-width: 800px; 
     margin: auto; 
+}
+
+/* Hero Anchor Links (WWO Cards Overlay) */
+#whowhatour { 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px; 
+    padding-bottom: 0; 
+    width: 100%;
+}
+
+#whowhatour .grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;        
+    max-width: 1100px; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.wwo { 
+    cursor: pointer; 
+    text-decoration: none; /* Removes underline for <a> tags */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 250px;          
+    height: 140px;          
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    background: #ffffff; 
+    color: #ffffff;
+    padding: 20px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+    text-align: center; 
+    box-sizing: border-box;
+}
+
+.wwo h4 {
+    font-size: 1.8rem;       
+    letter-spacing: 1px;     
+    margin: 0;                
+    color: var(--2ndary);          
+    line-height: 1.2;
+    text-align: center;
+}
+
+.wwo:hover { 
+    background-color: var(--2ndary); 
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.wwo:hover h4 {
+    color: #ffffff !important;
 }
 
 /* Grid & Cards */
@@ -203,7 +279,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin: 40px 0 20px; 
     font-size: 2.5rem; 
     color: var(--2ndary);
-    text-transform: none; /* Enforces clean Title Case layout scaling across components */
+    text-transform: none; 
 }
 
 .subtitle { 
@@ -213,7 +289,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .grid { 
-    display: flex;             
+    display: flex;              
     flex-direction: row;      
     flex-wrap: wrap;           
     justify-content: center;   
@@ -240,7 +316,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .card h3 { 
@@ -280,14 +356,13 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin-bottom: 20px;
 }
 
-/* Responsive Image Polish for Member Bio Grid */
 .member-photo {
-    width: 230px;         /* 1. Sets a uniform width */
-    height: 230px;        /* 2. Sets a uniform height */
-    object-fit: cover;    /* 3. Crops the image to fit the box without stretching */
-    border-radius: 50%;   /* 4. Optional: Makes them perfect circles (remove if you want squares) */
+    width: 230px;         
+    height: 230px;        
+    object-fit: cover;    
+    border-radius: 50%;   
     display: block;
-    margin: 0 auto 15px;  /* Centers the image and adds space below it */
+    margin: 0 auto 15px;  
 }
 
 .member h4 {
@@ -296,7 +371,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .member p {
-    margin: 0;         
+    margin: 0;          
     line-height: 1.1;  
     min-height: 1.1em;
 }
@@ -322,86 +397,6 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* whowhatour Section Spacing */
-#whowhatour { 
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px; 
-    padding-bottom: 80px; 
-}
-
-#whowhatour .grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;        
-    max-width: 1100px; 
-    margin: 60px auto 0 auto; 
-    width: 100%;
-}
-
-.wwo { 
-    cursor: pointer; 
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    flex: 1 1 calc(33.333% - 20px); 
-    min-width: 250px;          
-    height: 170px;          
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;     
-    background: #ffffff; 
-    color: #ffffff;
-    padding: 20px; 
-    border-radius: 12px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
-    text-align: center; 
-    box-sizing: border-box;
-}
-
-.wwo h4 {
-    font-size: 1.8rem;       
-    /*  text-transform: uppercase; */
-    letter-spacing: 1px;     
-    margin: 0;               
-    color: var(--2ndary);          
-    line-height: 1.2;
-    text-align: center;
-}
-
-.wwo p {
-    margin: 0;         
-    line-height: 1.1;  
-    min-height: 1.1em;
-}
-
-.wwo p + p {
-    margin-top: 10px; 
-    font-size: 0.95rem;
-    opacity: 0.7;
-    min-height: 2.3em;
-    color: var(--2ndary);
-}
-
-.wwo p:first-of-type {
-    font-family: 'Inter', sans-serif;
-    font-style: italic; 
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 2px;
-}
-
-.wwo:hover { 
-    background-color: var(--2ndary); 
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
-}
-
-.wwo:hover h4, 
-.wwo:hover p {
-    color: #ffffff !important;
-}
- 
 .leadership-section .subtitle {
     font-size: 2.5rem;   
     font-weight: 700;    
@@ -452,93 +447,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     color: var(--2ndary);      
 }
 
-/* Modals Architecture */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.50); 
-    backdrop-filter: blur(40px); 
-}
-
-.modal-content {
-    position: relative;        
-    margin: 10% auto;
-    padding: 70px 40px 40px;   
-    border-radius: 12px;
-    width: 80%;
-    max-width: 600px;
-    color: #ffffff;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-#b3Modal .modal-logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 35px; 
-    width: auto;
-    opacity: 0.8; 
-    z-index: 10; 
-}
-
-#b3Modal .modal-content {
-    background-color: rgba(255, 255, 255, 0); 
-    backdrop-filter: blur(1px); 
-}
-
-#b3Name {
-    text-align: center;
-    width: 100%;
-    color: #ffffff;      
-    margin-bottom: 10px;
-    font-size: 2rem;     
-}
-
-#b3description {
-    text-align: center;
-}
-
-#bioModal .modal-content {
-    background-color: #151922; 
-    backdrop-filter: blur(15px); 
-    padding-top: 40px;
-}
-
-#bioModal .modal-logo {
-    position: relative; 
-    display: block;      
-    margin: 0 auto 20px auto; 
-    top: 0;              
-    left: 0;             
-    height: 30px;        
-}
-
-#bioName {
-    color: #ffffff;                
-    font-size: 1.8rem;
-    margin-bottom: 0;
-}
-
-#bioTitle {
-    font-style: italic;
-    color: #ececec;
-    opacity: 0.8;
-    margin-top: 5px;
-}
-
-.modal-content hr { 
-    border: 0; 
-    border-top: 1px solid rgba(255, 255, 255, 0.2); 
-    margin: 20px 0; 
-}
-
-/* Success Modal Overlay */
+/* Success Modal Overlay (Retained for Contact Forms) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -592,32 +501,6 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     to { transform: scale(1); opacity: 1; }
 }
 
-.success-bg-img {
-    position: relative; 
-    overflow: hidden;   
-    background: #ffffff; 
-}
-
-.success-bg-img::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background-image: url('image/ParralignTransP.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1; 
-    z-index: 0; 
-}
-
-.modal-inner {
-    position: relative;
-    z-index: 1; 
-}
-
 .close-btn {
     position: absolute;
     right: 25px;
@@ -651,7 +534,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .contact-form-container { 
     width: 100%;       
     max-width: 1000px;  
-    margin: 30px auto 10px auto; /* RESTORED: Generous 30px top margin keeps desktop elegant and breathable */
+    margin: 30px auto 10px auto; 
     background: #fff; 
     padding: 30px;     
     border-radius: 5px; 
@@ -701,7 +584,6 @@ input, textarea {
     transition: all 0.2s ease;
 }
 
-/* Subtle accent focus states when typing */
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary);
@@ -720,7 +602,6 @@ input:focus, textarea:focus {
 .contact-form-container button.btn-cta {
     font-size: 1rem;       
     font-weight: 700;        
-    /*  text-transform: uppercase; */
     letter-spacing: 0.5px;     
     padding: 14px 28px;      
     margin: 10px 0 0 0 !important; 
@@ -729,15 +610,12 @@ input:focus, textarea:focus {
     cursor: pointer;
 }
 
-/* ==========================================================================
-   Footer Component Expansion
-   ========================================================================= */
-
+/* Footer Component */
 footer {
     background-color: var(--2ndary); 
     color: #ffffff;            
     text-align: center;
-    padding: 30px 0; /* Slightly increased padding for multi-line breathing room */
+    padding: 30px 0; 
     width: 100%;
     margin-top: auto; 
     flex-shrink: 0; 
@@ -747,7 +625,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* Uniform vertical space between copyright and links */
+    gap: 12px; 
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -759,7 +637,6 @@ footer p {
     opacity: 0.8;
 }
 
-/* Links Wrapper layout */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -767,11 +644,10 @@ footer p {
     gap: 20px;
 }
 
-/* Elegant, interactive link layout */
 .footer-link-item {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Gap between the icon and text */
+    gap: 8px; 
     color: #ffffff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -782,28 +658,23 @@ footer p {
     transition: all 0.2s ease;
 }
 
-/* Icon scaling utility */
 .footer-icon {
     width: 18px;
     height: 18px;
-    fill: #ffffff; /* Sets the SVG icon color to white */
+    fill: #ffffff; 
     transition: fill 0.2s ease;
 }
 
-/* Hover Treatment: Highlights cleanly to light green accent color */
 .footer-link-item:hover {
     color: var(--p2);
     opacity: 1;
 }
 
 .footer-link-item:hover .footer-icon {
-    fill: var(--p2); /* Seamless color shift for the icon on hover */
+    fill: var(--p2); 
 }
 
-/* ==========================================================================
-   Pitch Deck Integration Elements
-   ========================================================================= */
-
+/* Integrated Section Story & Stat Elements */
 .story-split {
     display: flex;
     flex-wrap: wrap;
@@ -894,24 +765,12 @@ footer p {
     box-shadow: 0 20px 40px rgba(36, 77, 87, 0.15);
 }
 
-.case-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    /* text-transform: uppercase; */
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
 .case-title {
     font-size: 2rem;
     color: var(--2ndary);
     margin-bottom: 30px;
 }
 
-/* Two Column Case Study Grid Layout */
 .case-two-column-grid {
     display: flex;
     flex-direction: row;
@@ -936,19 +795,10 @@ footer p {
     color: #173e5c;
 }
 
-.case-card-sub {
-    font-size: 0.85rem;
-    font-style: italic;
-    opacity: 0.7;
-    display: block;
-    margin-bottom: 25px;
-}
-
 .case-body-content h5 {
     color: #497f85;
     font-size: 0.95rem;
     margin: 20px 0 5px 0;
-    /*  text-transform: uppercase; */
     letter-spacing: 0.5px;
 }
 
@@ -964,10 +814,7 @@ footer p {
     margin-bottom: 0;
 }
 
-/* ==========================================================================
-   Timeline Process Section Styling
-   ========================================================================== */
-
+/* Timeline Process Section */
 .timeline-grid {
     display: flex;
     flex-direction: row;
@@ -978,7 +825,6 @@ footer p {
     margin-top: 20px;
 }
 
-/* Redesigned with a clean structural right edge layout */
 .timeline-card {
     background: #ffffff;
     padding: 30px 25px;
@@ -988,43 +834,20 @@ footer p {
     min-width: 230px;           
     position: relative;
     box-sizing: border-box;
-
-    /* Centered all typography components inside the cards */
     text-align: center;
-    
-    /* FIX: Standardized border declaration ensures color transition works smoothly */
     border-right: 3px solid #eee; 
-    
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Redesigned to slide horizontally to the left on hover */
 .timeline-card:hover {
-    /* FIX: Changed from translateY to translateX to shift horizontally to the left */
     transform: translateX(-4px);
-    
-    /* Highlight color changes cleanly to branding primary teal */
     border-right-color: var(--primary); 
-}
-
-.timeline-badge {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary);
-    background: rgba(75, 138, 155, 0.1);
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  
 }
 
 .timeline-card h4 {
     color: var(--2ndary);
     font-size: 1.2rem;
     margin: 0 0 10px 0;
-    
 }
 
 .timeline-card p {
@@ -1032,68 +855,28 @@ footer p {
     line-height: 1.5;
     color: #555;
     margin: 0;
-    
 }
 
-/* ==========================================================================
-   Vision Outro Section Styling
-   ========================================================================== */
-
-#vision-outro {
-    padding: 30px 0 30px 0; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-.outro-container {
-    max-width: 1000px; 
-    margin: 0 auto;
-}
-
-#vision-outro h3.text-mid-scale {
-    margin-top: 0;       
-    margin-bottom: 8px;  
-}
-
-#vision-outro p {
-    color: #555;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin: 0;
-    font-weight: 400;
-}
-
-/* ==========================================================================
-   Fix #14: Enterprise Engagements Section Alignment & Spacing Balance
-   ========================================================================= */
-
-/* Adjusted to safely match vertical space padding above and below cards */
 #featured-case {
-    padding-top: 10px;    /* Pulls section up to remove large structural space above */
-    padding-bottom: 50px; /* Perfectly standardizes and matches exit spacing onto Outro text */
+    padding-top: 10px;    
+    padding-bottom: 50px; 
 }
 
-/* Fix Change 3: Category Badges styled as a pale muted layout label */
 .case-category-badge {
     display: inline-block;
-    background-color: rgba(136, 201, 208, 0.12); /* Pale muted teal tint */
+    background-color: rgba(136, 201, 208, 0.12); 
     border: 1px solid rgba(136, 201, 208, 0.25);
-    color: var(--primary);                                        
+    color: var(--primary);                                         
     padding: 4px 12px;
-    border-radius: 4px;                                           
+    border-radius: 4px;                                            
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
-    /*  text-transform: uppercase; */
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
 
-/* ==========================================================================
-   Fix #15 & #16: Connective Transitions & Access Layouts
-   ========================================================================== */
-
+/* Transitions & Actions */
 .section-transition-text {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
@@ -1103,16 +886,6 @@ footer p {
     text-align: center;
     margin: 40px auto 0 auto;
     max-width: 750px;
-}
-
-.timeline-transition-lead {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    font-weight: 600;
-    color: var(--primary);
-    text-align: center;
-    margin: 0 auto 10px auto;
 }
 
 .timeline-transition-footer {
@@ -1144,165 +917,50 @@ footer p {
     opacity: 0.8;
 }
 
-/* ==========================================================================
-   Premium Editorial Connect Header Styling
-   ========================================================================= */
-
-.connect-premium-intro {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 40px auto 35px auto; /* RESTORED: Generous 35px bottom margin ensures elegant desktop layout proportions */
-    max-width: 800px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left; 
-}
-
-.intro-left-column {
-    flex: 1 1 360px;
-}
-
-.intro-right-column {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.connect-premium-intro h3 {
-    color: var(--2ndary);
-    font-size: 1.60rem;            
-    line-height: 1.3;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    white-space: normal;        
-    word-break: keep-all;       
-}
-
-.connect-premium-intro .text-accent-color {
-    color: var(--primary); 
-}
-
-.connect-cta-body {
-    color: #475569;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-}
-
-/* Elegant framed block specifically for your low-pressure baseline message */
-.connect-quote-box {
-    border-left: 3px solid var(--accent); 
-    padding-left: 15px;
-    margin: 5px 0 0 0;
-}
-
-.connect-cta-highlight {
-    font-family: 'Poppins', sans-serif;
-    color: var(--2ndary);
-    font-size: 1.05rem;
-    font-weight: 600;
-    font-style: italic;
-    margin: 0;
-    line-height: 1.4;
-    letter-spacing: -0.2px;
-}
-
-/* Direct Contact Channels Alignment */
-.connect-direct-channels {
-    font-family: 'Inter', sans-serif;
-    color: var(--2ndary);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin: 8px 0 0 0; 
-    opacity: 0.8;
-}
-
-/* ==========================================================================
-   Fix #18: Design System Capitalization & Typographic Standardization Rules
-   ========================================================================== */
-
-/* Clean Title Case rule scaling safely across structural blocks */
 .section-title-neutral {
-    color: var(--2ndary);       /* Restores high-contrast dark teal against light wrappers */
-    text-transform: none;       /* Standardizes to Title Case rule across layout blocks */
-    
-    /* Typographic Adjustments */
+    color: var(--2ndary);       
+    text-transform: none;       
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: -0.5px;
-    
-    /* Centered Structural Underline (Text-Width Locked) */
-    display: table;             /* Restricts box width to exact length of the words */
-    margin: 0 auto 35px auto;   /* Centers the title perfectly and adds bottom breathing room */
-    border-bottom: 2px solid var(--primary); /* Smooth brand teal accent line */
-    padding-bottom: 8px;        /* Spacing between text and the underline */
+    display: table;             
+    margin: 0 auto 35px auto;   
+    border-bottom: 2px solid var(--primary); 
+    padding-bottom: 8px;        
 }
 
-/* Micro-Badges / Taglines: Programmatic uppercase treatment with tracking overrides */
-.intro-tagline, .outro-tagline {
-    font-family: 'Inter', sans-serif !important;
-   /*  text-transform: uppercase !important;  */
-    letter-spacing: 2px !important;
-}
-
-/* Option 1: Premium status badge container pill chip layout for Active Advisory */
-.intro-tagline {
-    color: var(--primary);
-    background-color: rgba(75, 138, 155, 0.08); 
-    border: 1px solid rgba(75, 138, 155, 0.15);
-    display: inline-block; 
-    padding: 4px 10px;
-    border-radius: 4px; 
-    margin-bottom: 16px;
-}
-
-/* Outro tagline specific layout alignment variables */
-.outro-tagline {
-    display: inline-block;
-    color: var(--primary); 
-    margin-bottom: 15px;
-}
-
-/* Heading formatting across child information architectures */
 .tech-card h4,
 .timeline-card h4,
 .case-card-header h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    text-transform: none; /* Safely balances hierarchy against top-tier sections */
+    text-transform: none; 
 }
 
-/* ==========================================================================
-   Media Queries & Responsive Overrides
-   ========================================================================== */
-
-/* Tablet & Mobile Screens Context Layouts */
-/* Tablet & Mobile Screens Context Layouts */
+/* Media Queries & Responsive Overrides */
 @media (max-width: 768px) {
-    /* Keep the card's structure but constrain its width so it centers nicely */
+    .hero-overlay-content {
+        position: relative; /* Unstacks overlay on smaller screens so text/buttons expand naturally */
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
     .member {
         width: 100%;
-        max-width: 340px;      /* Prevents the card from stretching too wide on tablet */
-        margin: 0 auto 20px;   /* Perfectly centers the card on the page and adds vertical space */
-        padding: 30px 20px;    /* Restores breathing room inside the card */
+        max-width: 340px;      
+        margin: 0 auto 20px;   
+        padding: 30px 20px;    
         text-align: center;
     }
     
-    /* Keep the photo perfectly round and centered */
     .member-photo {
-        margin: 0 auto 15px !important; /* Forces the image to center on mobile */
-    }
-    
-    #team .grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 0 auto 15px !important; 
     }
     
     #team .grid {
@@ -1311,46 +969,16 @@ footer p {
         align-items: center;
     }
 
-    /* Process Timeline Mobile Adaptations */
     .timeline-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
-    /* Fix #12 Mobile Safety Overrides: Active explicit borders on touch devices */
     .timeline-card {
         width: 100%;
         max-width: 450px;
-        
-        /* FIX: Preserves right side color state on mobile platforms */
         border-right-color: rgba(75, 138, 155, 0.2); 
-    }
-    
-    /* Asymmetric Premium Intro Adaptations on Mobile */
-    .connect-premium-intro {
-        flex-direction: column;
-        gap: 15px;
-        padding: 0 10px;
-        margin-bottom: 15px; /* MOBILE-ONLY UPDATE: Shrinks the margin-bottom to bring form container up */
-    }
-    
-    /* Collapse the desktop flex values on mobile layout to shrink the space */
-    .intro-left-column,
-    .intro-right-column {
-        flex: 1 1 auto;
-    }
-    
-    .connect-premium-intro h3 {
-        font-size: 1.8rem;
-    }
-    
-    .connect-quote-box {
-        margin-top: 0; /* MOBILE-ONLY UPDATE: Tightens mobile space under links */
-    }
-
-    .contact-form-container {
-        margin: 0 auto 10px auto; /* MOBILE-ONLY UPDATE: Pulls form card tight against details only on smaller screens */
     }
     
     .hero h1 {
@@ -1359,7 +987,6 @@ footer p {
     }
 }
 
-/* Mobile Specific Optimizations */
 @media (max-width: 600px) {
     .form-group {
         flex-direction: column;
@@ -1370,44 +997,22 @@ footer p {
         width: 100%; 
     }
 
-    #vision-outro {
-        padding: 50px 0 60px 0;
-    }
-
-    #vision-outro h2 {
-        font-size: 1.7rem;
-    }
-
-    #vision-outro p {
-        font-size: 1rem;
-    }
-
     .hero h1 {
         font-size: 2rem; 
     }
-
-    .modal-logo {
-        height: 30px;
-        top: 15px;
-        left: 15px;
-    }
-
-    .modal-content {
-        padding-top: 50px;
-    }
 }
 
-/* Color Shift Flash Animation */
+/* Flashing Header Text Animation */
 @keyframes color-flash {
     0%, 100% {
-        color: #ffffff; /* Stark white base */
+        color: #ffffff; 
     }
     40% {
-        color: var(--2ndary); /* Shifts to your brand orange #e67e22 */
+        color: var(--2ndary); 
     }
 }
 
 .flashing-text {
     animation: color-flash 10.5s infinite ease-in-out;
-    font-weight: 600; /* Ensures thin letterforms stay legible during transition */
+    font-weight: 600; 
 }
