@@ -173,7 +173,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     width: 100%;
     height: auto;
     min-height: 380px; /* Reduced from 580px to bring text and buttons closer together */
-    max-height: 530px; /* Cap the max height on wide screens */
+    max-height: 560px; /* Cap the max height on wide screens */
     object-fit: cover;
     display: block;
     border-radius: 0;
