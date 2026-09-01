@@ -146,13 +146,13 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 /* ==========================================================================
-   Hero Section Layout (Full-Bleed Width & Evenly Distributed Spacing)
+   Hero Section Layout (Full-Bleed, Narrower Height & Interactive Buttons)
    ========================================================================== */
 
 .hero { 
     background: var(--primary); 
     width: 100%;
-    padding: .2cm 0; /* Keeps 1cm colored background on top and bottom */
+    padding: .2cm 0; /* Keeps colored background on top and bottom */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -168,18 +168,18 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     box-sizing: border-box;
 }
 
-/* Image background extending edge-to-edge */
+/* Narrower image background extending edge-to-edge */
 .hero-image {
     width: 100%;
     height: auto;
-    min-height: 380px; /* Reduced from 580px to bring text and buttons closer together */
-    max-height: 560px; /* Cap the max height on wide screens */
+    min-height: 380px; /* Brings text and buttons closer together */
+    max-height: 560px; /* Caps max height on wide screens */
     object-fit: cover;
     display: block;
     border-radius: 0;
 }
 
-/* 2. Adjust overlay padding to fit the narrower height */
+/* Overlay Layer with Evenly Divided Vertical Spacing */
 .hero-overlay-content {
     position: absolute;
     top: 0;
@@ -191,10 +191,10 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     justify-content: space-evenly; 
     align-items: center;
     text-align: center;
-    padding: 20px 20px; /* Reduced vertical padding */
+    padding: 20px 20px; 
     box-sizing: border-box;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop for readability */
 }
 
 /* Remove default vertical margins so space-evenly handles spacing cleanly */
@@ -215,11 +215,13 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin: 0 auto; 
 }
 
-/* WWO Hero Anchor Buttons Section */
+/* WWO Hero Anchor Buttons Section Container */
 #whowhatour { 
     width: 100%;
     margin: 0; 
     padding-bottom: 0;
+    position: relative;
+    z-index: 10; /* Raises section above overlay container background */
 }
 
 #whowhatour .grid {
@@ -231,13 +233,14 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     width: 100%;
 }
 
+/* Fully Clickable Anchor Link Cards */
 .wwo { 
     cursor: pointer; 
-    text-decoration: none;
+    text-decoration: none; /* Removes underline for <a> tags */
     transition: transform 0.2s ease, background-color 0.2s ease;
     flex: 1 1 calc(33.333% - 20px); 
     min-width: 250px;          
-    height: 110px; /* Reduced from 130px */         
+    height: 110px; /* Compact height matches narrower hero proportion */         
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -249,6 +252,9 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
     text-align: center; 
     box-sizing: border-box;
+    position: relative;
+    z-index: 20; /* Ensures buttons sit cleanly on top and capture clicks */
+    pointer-events: auto; /* Forces click interactions */
 }
 
 .wwo h4 {
@@ -935,17 +941,57 @@ footer p {
     text-transform: none; 
 }
 
-/* Media Queries & Responsive Overrides */
+/* Media Queries & Mobile Overrides */
 @media (max-width: 768px) {
+    /* Keep overlay absolute on mobile so text/buttons stay ON TOP of the picture */
     .hero-overlay-content {
-        position: relative; /* Allows content to expand naturally on smaller screens */
-        padding: 40px 20px;
-        background: rgba(0, 0, 0, 0.55);
-        gap: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px;
+        justify-content: space-evenly;
+        background: rgba(0, 0, 0, 0.55); /* Darker overlay for strong readability on small screens */
     }
 
+    /* Shrink title font & allow wrapping */
+    .hero h1 {
+        white-space: normal;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        padding: 0 5px;
+    }
+
+    /* Shrink hero paragraph for mobile screen area */
+    .hero p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        padding: 0 10px;
+    }
+
+    /* Stack WWO buttons vertically and make them compact */
+    #whowhatour .grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .wwo {
+        width: 100%;
+        max-width: 280px;
+        height: 45px; /* Compact height for mobile screen boundaries */
+        min-width: unset;
+        padding: 5px 10px;
+    }
+
+    .wwo h4 {
+        font-size: 1rem;
+    }
+
+    /* Maintain background image height on mobile */
     .hero-image {
-        min-height: 300px;
+        min-height: 480px;
     }
 
     .member {
@@ -960,12 +1006,7 @@ footer p {
         margin: 0 auto 15px !important; 
     }
     
-    #team .grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    #team .grid,
     .timeline-grid {
         display: flex;
         flex-direction: column;
@@ -976,11 +1017,6 @@ footer p {
         width: 100%;
         max-width: 450px;
         border-right-color: rgba(75, 138, 155, 0.2); 
-    }
-    
-    .hero h1 {
-        white-space: normal;
-        font-size: 1.8rem;
     }
 }
 
@@ -995,7 +1031,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 2rem; 
+        font-size: 1.2rem; 
     }
 }
 
