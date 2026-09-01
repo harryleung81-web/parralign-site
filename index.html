@@ -40,15 +40,15 @@
                 
                 <section id="whowhatour">
                     <div class="grid">
-                        <a href="#who-we-are" class="wwo">
+                        <div class="wwo" onclick="openB3('who')">
                             <h4>Who we are</h4>
-                        </a>
-                        <a href="#what-we-do" class="wwo">
+                        </div>
+                        <div class="wwo" onclick="openB3('what')">
                             <h4>What we do</h4>
-                        </a>
-                        <a href="#our-focus" class="wwo">
+                        </div>
+                        <div class="wwo" onclick="openB3('our')">
                             <h4>Our focus</h4>
-                        </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -56,8 +56,7 @@
     </header>
 
     <main class="container">
-        <!-- Section 1: Who We Are -->
-        <section id="who-we-are" style="padding: 60px 0 30px 0;">
+        <section id="track-record" style="padding: 60px 0 30px 0;">
             <div class="story-split">
                 <div class="story-text">
                     <h3>We didn't learn this from a client. We lived it as one.</h3>
@@ -87,8 +86,7 @@
 
         <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 0 0;">
 
-        <!-- Section 2: What We Do -->
-        <section id="what-we-do" style="padding: 40px 0;">
+        <section id="capabilities" style="padding: 40px 0;">
             <h2 class="section-title" style="margin-top: 10px;">Builds others said couldn't be done</h2>
             
             <p class="subtitle">We learned Varicent from the inside out as users who depended on it. That depth is what made our creative solutions possible.</p>
@@ -130,8 +128,7 @@
         
         <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 0 0;">
         
-        <!-- Section 3: Our Focus (Enterprise Engagements) -->
-        <section id="our-focus" style="padding: 20px 0 0 0;">
+        <section id="featured-case">
             <div class="case-container">
                 <h3 class="section-title-neutral">Enterprise Engagements</h3>
                 
@@ -206,6 +203,29 @@
             <p class="timeline-transition-footer">If any of this sounds familiar, that's not a coincidence.</p>
         </div>
     </section>
+
+    <!-- Modal 1: Who / What / Our Focus Pop-up -->
+    <div id="b3Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeB3()">&times;</span>
+            <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="modal-logo">
+            <h2 id="b3Name"></h2>
+            <hr>
+            <p id="b3description"></p>
+        </div>
+    </div>
+
+    <!-- Modal 2: Team Member Bio Pop-up -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBio()">&times;</span>
+            <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="modal-logo">
+            <h3 id="bioName"></h3>
+            <p id="bioTitle"></p>
+            <hr>
+            <p id="bioText"></p>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
