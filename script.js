@@ -22,6 +22,33 @@ const teamData = {
     }
 };
 
+// --- Who / What / Our Focus Data for Hero Popups ---
+const whowhatourData = {
+    'who': {
+        name: "Who we are",
+        description: "Most businesses don't have a data problem, they have an alignment problem. We built Parralign because we spent decades on the client side of that exact problem — operators who owned and scaled complex enterprise operations from the inside, not outside theorists. We listen beyond the stated problem to what your organization actually needs, bridging the teams on the ground with the executives in the boardroom."
+    },
+    'what': {
+        name: "What we do",
+        description: "Behind every system are the people who run it — so we align incentives, teams, and structure, not just technology. We assess, redesign, and streamline critical workflows across compensation, talent operations, and finance, tracing operational friction down to its root cause and turning fractured configurations into seamless, automated workflows."  
+    },
+    'our': {
+        name: "Our focus",
+        description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown."
+    }
+};
+
+// --- Function for Hero Cards Popups ---
+function openB3(key) {
+    const data = whowhatourData[key];
+    const modal = document.getElementById('b3Modal');
+    if (data && modal) {
+        document.getElementById('b3Name').innerText = data.name;
+        document.getElementById('b3description').innerText = data.description;
+        modal.style.display = "block";
+    }
+}
+
 // --- Function for Team Page Bio Popups ---
 function openBio(key) {
     const data = teamData[key];
@@ -32,6 +59,12 @@ function openBio(key) {
         document.getElementById('bioText').innerText = data.bio;
         modal.style.display = "block";
     }
+}
+
+// Separate Close Functions
+function closeB3() { 
+    const modal = document.getElementById('b3Modal');
+    if (modal) modal.style.display = "none"; 
 }
 
 function closeBio() { 
@@ -71,11 +104,13 @@ function closeSuccessModal() {
     if (modal) modal.style.display = "none";
 }
 
-// --- SHARED CLICK-OUTSIDE LISTENER FOR REMAINING MODALS ---
+// --- SHARED CLICK-OUTSIDE LISTENER FOR MODALS ---
 window.onclick = function(event) {
     const bioModal = document.getElementById('bioModal');
+    const b3Modal = document.getElementById('b3Modal');
     const successModal = document.getElementById('successModal');
 
     if (bioModal && event.target === bioModal) bioModal.style.display = "none";
+    if (b3Modal && event.target === b3Modal) b3Modal.style.display = "none";
     if (successModal && event.target === successModal) successModal.style.display = "none";
 };
