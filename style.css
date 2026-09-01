@@ -152,7 +152,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .hero { 
     background: var(--primary); 
     width: 100%;
-    padding: 1cm 0; /* Keeps 1cm colored background on top and bottom */
+    padding: .2cm 0; /* Keeps 1cm colored background on top and bottom */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
