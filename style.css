@@ -150,16 +150,32 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 /* Hero Section - Wrapper Expansion */
 .hero { 
     background: var(--primary); 
-    color: #fff; 
-    text-align: center; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center; 
-    min-height: auto; 
-    padding: 30px 10px; /* Reduced side padding to give max horizontal width */
-    box-sizing: border-box;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Sets exactly 1cm of colored background space at top and bottom */
+    padding: 1cm 0; 
+    box-sizing: border-box;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust if you want the image wider/narrower */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Side padding so the image doesn't touch the screen edges on smaller devices */
+    box-sizing: border-box;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Adjust height to control how tall the hero region stretches */
+    object-fit: cover;  /* Ensures the picture cleanly fills the box without stretching */
+    border-radius: 8px; /* Optional: gives a slight rounded corner to the image */
+    display: block;
 }
 
 /* Hero H1 - Forced Single Line Expansion */
