@@ -35,25 +35,25 @@
                     
                     <div class="grid">
                         <div class="member" onclick="openBio('mea')">
-			<img src="image/MK.png" alt="Mea Kwon" class="member-photo">
+                            <img src="image/MK.png" alt="Mea Kwon" class="member-photo">
                             <h4>Mea Kwon</h4>
                             <p><u>Founding Partner</u></p>                                
                             <p>Financial Services & Human Capital</p>
                         </div>
                         <div class="member" onclick="openBio('harry')">
-			<img src="image/HL.png" alt="Harry Leung" class="member-photo">
-							<h4>Harry Leung</h4>
+                            <img src="image/HL.png" alt="Harry Leung" class="member-photo">
+                            <h4>Harry Leung</h4>
                             <p><u>Founding Partner</u></p>
                             <p>Data Infrastructure & Architecture</p>
                         </div>
                         <div class="member" onclick="openBio('nancy')">
-			<img src="image/NM2.png" alt="Nancy Maloney" class="member-photo">
+                            <img src="image/NM2.png" alt="Nancy Maloney" class="member-photo">
                             <h4>Nancy Maloney</h4>
                             <p><u>Founding Partner (Advisory)</u></p>
                             <p>CPA & Data Governance</p>
                         </div>
                         <div class="member" onclick="openBio('natalie')">
-			<img src="image/NJ.png" alt="Natalie Johnson" class="member-photo">
+                            <img src="image/NJ.png" alt="Natalie Johnson" class="member-photo">
                             <h4>Natalie Johnson</h4>
                             <p><u>Advisory</u></p>
                             <p>Learning & Development</p>
@@ -64,34 +64,32 @@
         </div>
     </section>
 
+    <!-- Bio Modal Window -->
     <div id="bioModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeBio()">&times;</span>
             <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="modal-logo">
-            <h2 id="bioName"></h2>
-            <h4 id="bioTitle"></h4>
+            <h3 id="bioName"></h3>
+            <p id="bioTitle"></p>
             <hr>
             <p id="bioText"></p>
         </div>
     </div>
 
-     <footer>
-    <div class="footer-container">
-        <p>&copy; 2026 parralign. All rights reserved. | info@parralign.com</p>
-        
-        <!-- Add your new linked icon and text channel here -->
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/company/parralign" target="_blank" rel="noopener" class="footer-link-item">
-                <!-- Inline SVG Icon (Example: LinkedIn) -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-icon">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                
-            </a>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 parralign. All rights reserved. | info@parralign.com</p>
+            
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/company/parralign" target="_blank" rel="noopener" class="footer-link-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-icon">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
-	
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
