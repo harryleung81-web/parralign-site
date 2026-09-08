@@ -73,31 +73,45 @@ function closeBio() {
 }
 
 // --- Function for Contact Form & Success Modal ---
-const contactForm = document.getElementById('contactForm');
-const successModal = document.getElementById('successModal');
-const submitBtn = document.getElementById('submitBtn');
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const successModal = document.getElementById('successModal');
+    const submitBtn = document.getElementById('submitBtn');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        if (submitBtn) submitBtn.innerText = 'Sending...';
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        const serviceID = 'service_01ds56n';
-        const templateID = 'template_0p8574y';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Sending...';
+            }
 
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                if (submitBtn) submitBtn.innerText = 'Submit';
-                if (successModal) successModal.style.display = 'flex';
-                contactForm.reset();
-            }, (err) => {
-                if (submitBtn) submitBtn.innerText = 'Submit';
-                alert("Send failed. Please email info@parralign.com directly.");
-                console.error("EmailJS Error:", err);
-            });
-    });
-}
+            // Verify these match your EmailJS Dashboard settings
+            const serviceID = 'service_01ds56n';
+            const templateID = 'template_0p8574y';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Submit Message';
+                    }
+                    if (successModal) {
+                        successModal.style.display = 'flex';
+                    }
+                    contactForm.reset();
+                }, (err) => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Submit Message';
+                    }
+                    alert("Send failed. Please check your EmailJS dashboard settings or contact info@parralign.com directly.");
+                    console.error("EmailJS Error details:", err);
+                });
+        });
+    }
+});
 
 function closeSuccessModal() {
     const modal = document.getElementById('successModal');
