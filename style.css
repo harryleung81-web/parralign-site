@@ -236,39 +236,44 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 /* Fully Clickable Interactive Cards */
 .wwo { 
     cursor: pointer; 
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     flex: 1 1 calc(33.333% - 20px); 
     min-width: 250px;          
-    height: 110px; /* Compact height matches narrower hero proportion */         
+    height: 120px;          
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;     
-    background: #ffffff; 
-    color: #ffffff;
-    padding: 15px; 
-    border-radius: 12px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+    /* Semi-transparent frosted white for modern glassmorphism over images */
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px);
+    padding: 20px; 
+    border-radius: 16px; 
+    /* Subtle modern border + soft ambient shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
     text-align: center; 
     box-sizing: border-box;
     position: relative;
-    z-index: 20; /* Ensures buttons sit cleanly on top and capture clicks */
-    pointer-events: auto; /* Forces browser click interactions */
+    z-index: 20;
 }
 
-.wwo h4 {
-    font-size: 1.8rem;       
-    letter-spacing: 1px;     
+.wwo h4 { 
+    font-size: 1.5rem;          
+    font-weight: 600;
+    letter-spacing: -0.3px; /* Subtle negative letter spacing modernizes headings */     
     margin: 0;                
     color: var(--2ndary);          
-    line-height: 1.2;
-    text-align: center;
+    line-height: 1.2; 
+    transition: color 0.25s ease;
 }
 
 .wwo:hover { 
     background-color: var(--2ndary); 
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: translateY(-4px); 
+    /* Soft, diffused shadow instead of harsh dark black */
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.25); 
 }
 
 .wwo:hover h4 {
