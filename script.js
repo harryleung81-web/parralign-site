@@ -1,3 +1,4 @@
+// --- Team Data for Team Page Popups ---
 const teamData = {
     'mea': {
         name: "Mea Kwon",
@@ -21,6 +22,7 @@ const teamData = {
     }
 };
 
+// --- Who / What / Our Focus Data for Hero Popups ---
 const whowhatourData = {
     'who': {
         name: "Who we are",
@@ -29,14 +31,14 @@ const whowhatourData = {
     'what': {
         name: "What we do",
         description: "Behind every system are the people who run it — so we align incentives, teams, and structure, not just technology. We assess, redesign, and streamline critical workflows across compensation, talent operations, and finance, tracing operational friction down to its root cause and turning fractured configurations into seamless, automated workflows."  
-            },
+    },
     'our': {
         name: "Our focus",
-        description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown.​"
+        description: "If your leadership team is making decisions based on manual spreadsheets, your departments run on disconnected logic, or a recent integration has left your back-office fragile — you're exactly why we built parralign. We make surgical corrections to stabilize what you have, without demanding a total teardown."
     }
 };
 
-// --- Function for Home Page Popups ---
+// --- Function for Hero Cards Popups ---
 function openB3(key) {
     const data = whowhatourData[key];
     const modal = document.getElementById('b3Modal');
@@ -47,7 +49,7 @@ function openB3(key) {
     }
 }
 
-// --- Function for Team Page Popups ---
+// --- Function for Team Page Bio Popups ---
 function openBio(key) {
     const data = teamData[key];
     const modal = document.getElementById('bioModal');
@@ -60,9 +62,15 @@ function openBio(key) {
 }
 
 // Separate Close Functions
-function closeB3() { document.getElementById('b3Modal').style.display = "none"; }
-function closeBio() { document.getElementById('bioModal').style.display = "none"; }
+function closeB3() { 
+    const modal = document.getElementById('b3Modal');
+    if (modal) modal.style.display = "none"; 
+}
 
+function closeBio() { 
+    const modal = document.getElementById('bioModal');
+    if (modal) modal.style.display = "none"; 
+}
 
 // --- Function for Contact Form & Success Modal ---
 const contactForm = document.getElementById('contactForm');
@@ -73,18 +81,18 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        submitBtn.innerText = 'Sending...';
+        if (submitBtn) submitBtn.innerText = 'Sending...';
 
         const serviceID = 'service_01ds56n';
         const templateID = 'template_0p8574y';
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-                submitBtn.innerText = 'Submit';
-                successModal.style.display = 'flex';
+                if (submitBtn) submitBtn.innerText = 'Submit';
+                if (successModal) successModal.style.display = 'flex';
                 contactForm.reset();
             }, (err) => {
-                submitBtn.innerText = 'Submit';
+                if (submitBtn) submitBtn.innerText = 'Submit';
                 alert("Send failed. Please email info@parralign.com directly.");
                 console.error("EmailJS Error:", err);
             });
@@ -92,10 +100,11 @@ if (contactForm) {
 }
 
 function closeSuccessModal() {
-    document.getElementById('successModal').style.display = "none";
+    const modal = document.getElementById('successModal');
+    if (modal) modal.style.display = "none";
 }
 
-// --- SHARED CLICK-OUTSIDE LISTENER ---
+// --- SHARED CLICK-OUTSIDE LISTENER FOR MODALS ---
 window.onclick = function(event) {
     const bioModal = document.getElementById('bioModal');
     const b3Modal = document.getElementById('b3Modal');
