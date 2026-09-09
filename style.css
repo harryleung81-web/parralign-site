@@ -16,7 +16,7 @@ html {
 /* Base Body Styles */
 body { 
     font-family: 'Poppins', sans-serif; 
-    margin: 0;               /* Removes default browser spacing */
+    margin: 0;              /* Removes default browser spacing */
     color: var(--text);   /* Uses the variable defined in :root */
     line-height: 1.6;      /* Increases vertical space between lines for readability */
 
@@ -138,15 +138,15 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin: 0 auto 50px auto; 
     font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;       
-    font-weight: 600;         
-    font-style: italic;       
+    font-weight: 600;          
+    font-style: italic;        
     color: var(--primary);      
     line-height: 1.5;
     letter-spacing: -0.2px;
 }
 
 /* ==========================================================================
-   Hero Section Layout (Full-Bleed, Narrower Height & Interactive Cards)
+   Hero Section Layout (Grouped Header Text & Anchored WWO Cards)
    ========================================================================== */
 
 .hero { 
@@ -172,8 +172,8 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 .hero-image {
     width: 100%;
     height: auto;
-    min-height: 380px; /* Reduced vertical height brings text and buttons closer */
-    max-height: 560px; /* Caps max height on wide screens */
+    min-height: 380px; 
+    max-height: 560px; 
     object-fit: cover;
     display: block;
     border-radius: 0;
@@ -197,10 +197,18 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop for readability */
 }
 
-/* Remove default vertical margins so space-evenly handles spacing cleanly */
+/* Grouped Header Text Wrapper */
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .hero h1 { 
     font-size: 2.8rem;   
-    margin: 0 auto; 
+    margin: 0 auto 12px auto; /* Tightly couples headline to subtext paragraph */
     width: 100%;
     max-width: 1400px;   
     white-space: nowrap; 
@@ -253,7 +261,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;      
+    align-items: center;     
     /* Semi-transparent frosted white for modern glassmorphism over images */
     background: rgba(255, 255, 255, 0.95); 
     backdrop-filter: blur(10px);
@@ -266,6 +274,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     box-sizing: border-box;
     position: relative;
     z-index: 20;
+    pointer-events: auto;
 }
 
 .wwo h4 { 
@@ -691,11 +700,11 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .contact-form-container { 
-    width: 100%;        
+    width: 100%;       
     max-width: 1000px;  
     margin: 30px auto 10px auto; 
     background: #fff; 
-    padding: 30px;      
+    padding: 30px;     
     border-radius: 5px; 
     box-shadow: 0 30px 30px rgba(0,0,0,0.05); 
     box-sizing: border-box; 
@@ -703,8 +712,8 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .contact-bg-wrapper {
     background-color: #f9f9f9;
-    width: 100%;        
-    padding: 20px 0;    
+    width: 100%;       
+    padding: 20px 0;   
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -715,7 +724,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .contact-form-container button.btn-cta {
-    font-size: 1rem;        
+    font-size: 1rem;       
     font-weight: 700;        
     letter-spacing: 0.5px;     
     padding: 14px 28px;      
@@ -757,7 +766,7 @@ input:focus, textarea:focus {
     font-family: 'Inter', sans-serif; 
     font-size: 2.5rem;               
     font-weight: 700;
-    margin-bottom: 10px;              
+    margin-bottom: 10px;             
     color: var(--2ndary);            
 }
 
@@ -1007,9 +1016,9 @@ footer p {
     display: inline-block;
     background-color: rgba(136, 201, 208, 0.12); 
     border: 1px solid rgba(136, 201, 208, 0.25);
-    color: var(--primary);                                          
+    color: var(--primary);                                         
     padding: 4px 12px;
-    border-radius: 4px;                                             
+    border-radius: 4px;                                            
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
@@ -1193,4 +1202,19 @@ footer p {
     .hero h1 {
         font-size: 1.2rem; 
     }
+}
+
+/* Flashing Header Text Animation */
+@keyframes color-flash {
+    0%, 100% {
+        color: #ffffff; 
+    }
+    40% {
+        color: var(--2ndary); 
+    }
+}
+
+.flashing-text {
+    animation: color-flash 10.5s infinite ease-in-out;
+    font-weight: 600; 
 }
