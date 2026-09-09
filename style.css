@@ -208,11 +208,13 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 }
 
 .hero p { 
-    font-size: 1.2rem;
-    /* font-style: italic; */
-    color: #FFFFFF;
-    opacity: 0.95; 
-    max-width: 800px; 
+    font-size: 1.15rem;
+    font-style: normal; /* Removes italics for a crisp, clean modern feel */
+    font-weight: 300; /* Sleek, modern font weight */
+    color: rgba(255, 255, 255, 0.88); /* Soft off-white reduces glare */
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    max-width: 780px; 
     margin: 0 auto; 
 }
 
