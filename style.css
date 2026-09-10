@@ -149,17 +149,20 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
    Hero Section Layout (Grouped Header Text & Anchored WWO Cards)
    ========================================================================== */
 
+/* ==========================================================================
+   Hero Section Layout (Grouped Header Text & Anchored WWO Cards)
+   ========================================================================== */
+
 .hero { 
     background: var(--primary); 
     width: 100%;
-    padding: .2cm 0; /* Colored background border top/bottom height */
+    padding: .2cm 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Relative Wrapper - 100% width touches left and right edges */
 .hero-wrapper {
     position: relative;
     width: 100%;
@@ -168,7 +171,6 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     box-sizing: border-box;
 }
 
-/* Narrower image background extending edge-to-edge */
 .hero-image {
     width: 100%;
     height: auto;
@@ -179,7 +181,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     border-radius: 0;
 }
 
-/* Overlay Layer with Evenly Divided Vertical Spacing */
+/* Container controls the top-to-bottom spacing between text and buttons */
 .hero-overlay-content {
     position: absolute;
     top: 0;
@@ -194,10 +196,10 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     padding: 20px 20px; 
     box-sizing: border-box;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.40); /* Soft dark backdrop for readability */
+    background: rgba(0, 0, 0, 0.40);
 }
 
-/* Grouped Header Text Wrapper */
+/* Grouped Wrapper: Keeps Headline and Paragraph tightly coupled */
 .hero-text-container {
     display: flex;
     flex-direction: column;
@@ -208,7 +210,7 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .hero h1 { 
     font-size: 2.8rem;   
-    margin: 0 auto 12px auto; /* Tightly couples headline to subtext paragraph */
+    margin: 0 auto 12px auto; /* Tightly attaches headline to paragraph */
     width: 100%;
     max-width: 1400px;   
     white-space: nowrap; 
@@ -217,8 +219,8 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
 
 .hero p { 
     font-size: 1.15rem;
-    font-style: normal; /* Removes italics for a crisp, clean modern feel */
-    font-weight: 300; /* Sleek, modern font weight */
+    font-style: normal; /* Upright typography for a clean modern feel */
+    font-weight: 300; 
     color: rgba(255, 255, 255, 0.88); /* Soft off-white reduces glare */
     line-height: 1.6;
     letter-spacing: 0.2px;
@@ -226,9 +228,8 @@ h1, h2, h3, h4, .section-title, .section-title-neutral, .subtitle {
     margin: 0 auto; 
 }
 
-/* Hero Headline Keyword Accent Styling */
 .hero-highlight {
-    color: var(--p2); /* Light teal accent (#88c9d0) for high legibility on dark hero */
+    color: var(--p2);
     font-weight: 700;
 }
 
